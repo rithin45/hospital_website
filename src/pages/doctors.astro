@@ -1,0 +1,1827 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+import {
+  CalendarDays,
+  Stethoscope,
+  ArrowRight,
+} from "lucide-react";
+
+// =====================================================
+// DOCTOR DATA
+// =====================================================
+
+const doctors = [
+  {
+    id: 1,
+    name: "Dr. Sarah Jenkins",
+    specialty: "General Medicine",
+    qualification: "MBBS, MD",
+    description:
+      "Experienced medical professional providing consultation and comprehensive patient care.",
+    image: "",
+  },
+  {
+    id: 2,
+    name: "Dr. Rajesh Sharma",
+    specialty: "Cardiology Specialist",
+    qualification: "MBBS, MD, DM",
+    description:
+      "Dedicated to delivering personalized healthcare and professional medical guidance.",
+    image: "",
+  },
+  {
+    id: 3,
+    name: "Dr. Anita Roy",
+    specialty: "Pediatrics Specialist",
+    qualification: "MBBS, DCH, MD",
+    description:
+      "Focused on providing thoughtful medical care and a comfortable experience for every patient.",
+    image: "",
+  },
+];
+---
+
+<Layout
+  title="Doctors | Health Vision Hospital"
+  description="Meet the medical professionals at Health Vision Hospital."
+>
+  <Navbar />
+
+  <main class="doctors-page-wrapper">
+
+    <!-- =====================================================
+         AMBIENT BACKGROUND
+    ====================================================== -->
+
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="doctors-page-header">
+
+      <div class="container-main">
+
+        <div class="doctors-page-header-content glass-card-premium">
+
+          <div class="card-top-reflection"></div>
+          <div class="card-shine-sweep"></div>
+
+          <div class="card-relative-content">
+
+            <p class="doctors-eyebrow">
+              Our Doctors
+            </p>
+
+            <h1 class="doctors-page-title">
+              Experienced professionals dedicated to your care
+            </h1>
+
+            <p class="doctors-page-description">
+              Our healthcare team combines professional expertise with a
+              patient-focused approach to provide quality medical care.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DOCTORS
+    ====================================================== -->
+
+    <section class="doctors-section">
+
+      <div class="container-main">
+
+        <div class="doctors-grid">
+
+          {
+            doctors.map((doctor) => (
+
+              <article class="doctor-card glass-card-premium">
+
+                <!-- Card effects -->
+
+                <div class="card-top-reflection"></div>
+                <div class="card-shine-sweep"></div>
+
+
+                <!-- =========================================
+                     DOCTOR IMAGE
+                ========================================== -->
+
+                <div class="doctor-image">
+
+                  {
+                    doctor.image ? (
+                      <img
+                        src={doctor.image}
+                        alt={doctor.name}
+                        class="doctor-photo"
+                      />
+                    ) : (
+                      <div class="doctor-placeholder">
+                        <Stethoscope
+                          size={42}
+                          strokeWidth={1.6}
+                        />
+                      </div>
+                    )
+                  }
+
+                  <div class="doctor-image-overlay"></div>
+
+                  <div class="doctor-specialty-badge">
+                    <span class="specialty-dot"></span>
+                    {doctor.specialty}
+                  </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     DOCTOR CONTENT
+                ========================================== -->
+
+                <div class="doctor-content card-relative-content">
+
+                  <p class="doctor-specialty">
+                    {doctor.specialty}
+                  </p>
+
+                  <h2 class="doctor-name">
+                    {doctor.name}
+                  </h2>
+
+                  <p class="doctor-qualification">
+                    {doctor.qualification}
+                  </p>
+
+                  <p class="doctor-description">
+                    {doctor.description}
+                  </p>
+
+
+                  <!-- =========================================
+                       PREMIUM DOCTOR BUTTON
+                  ========================================== -->
+
+                  <a
+                    href="/appointment"
+                    class="premium-button premium-button-primary"
+                  >
+
+                    <span class="premium-button-shine"></span>
+
+                    <span class="premium-button-content">
+
+                      <span class="premium-button-label">
+                        Quick Booking
+                      </span>
+
+                      <span class="premium-button-text">
+                        Book Appointment
+                      </span>
+
+                    </span>
+
+                    <span class="premium-button-arrow">
+                      <ArrowRight
+                        size={19}
+                        strokeWidth={2.4}
+                      />
+                    </span>
+
+                  </a>
+
+                </div>
+
+              </article>
+
+            ))
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="doctors-cta">
+
+      <div class="container-main">
+
+        <div class="doctors-cta-card">
+
+          <!-- CTA ambient lights -->
+
+          <div class="cta-glow cta-glow-one"></div>
+          <div class="cta-glow cta-glow-two"></div>
+
+          <div class="cta-top-highlight"></div>
+
+          <div class="card-relative-content">
+
+            <div class="doctors-cta-inner">
+
+              <p class="cta-eyebrow">
+                Personalised Medical Care
+              </p>
+
+              <h2 class="doctors-cta-title">
+                Find the right care for you
+              </h2>
+
+              <p class="doctors-cta-description">
+                Request an appointment with our medical team and take
+                the next step toward the care you need.
+              </p>
+
+
+              <!-- =========================================
+                   CTA PREMIUM BUTTON
+              ========================================== -->
+
+              <a
+                href="/appointment"
+                class="premium-button premium-button-cta"
+              >
+
+                <span class="premium-button-shine"></span>
+
+                <span class="premium-button-content">
+
+                  <span class="premium-button-label">
+                    Start Your Visit
+                  </span>
+
+                  <span class="premium-button-text">
+                    Request an Appointment
+                  </span>
+
+                </span>
+
+                <span class="premium-button-arrow">
+                  <ArrowRight
+                    size={20}
+                    strokeWidth={2.4}
+                  />
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+</Layout>
+
+
+<style>
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.doctors-page-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #edf5fd;
+}
+
+
+/* =========================================================
+   AMBIENT BACKGROUND
+========================================================= */
+
+.glow-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+.orb-1 {
+  width: 550px;
+  height: 550px;
+
+  top: -110px;
+  left: -140px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, 0.30) 0%,
+      rgba(11, 120, 199, 0.10) 70%,
+      transparent 100%
+    );
+}
+
+
+.orb-2 {
+  width: 650px;
+  height: 650px;
+
+  top: 30%;
+  right: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(3, 84, 165, 0.20) 0%,
+      rgba(60, 195, 252, 0.11) 70%,
+      transparent 100%
+    );
+}
+
+
+.orb-3 {
+  width: 700px;
+  height: 700px;
+
+  bottom: -200px;
+  left: 12%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, 0.20) 0%,
+      rgba(3, 84, 165, 0.12) 70%,
+      transparent 100%
+    );
+}
+
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.card-relative-content {
+  position: relative;
+  z-index: 5;
+}
+
+
+/* =========================================================
+   PREMIUM GLASS CARD
+========================================================= */
+
+.glass-card-premium {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    rgba(255, 255, 255, 0.58);
+
+  backdrop-filter:
+    blur(24px) saturate(200%);
+
+  -webkit-backdrop-filter:
+    blur(24px) saturate(200%);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.72);
+
+  border-radius: 32px;
+
+  box-shadow:
+    0 22px 50px rgba(15, 118, 110, 0.08),
+    0 7px 18px rgba(15, 118, 110, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.035);
+
+  transition:
+    transform .5s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .5s ease,
+    background .5s ease,
+    border-color .5s ease;
+}
+
+
+.glass-card-premium:hover {
+  transform: translateY(-5px);
+
+  background:
+    rgba(255, 255, 255, 0.74);
+
+  border-color:
+    rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 30px 62px rgba(15, 118, 110, 0.14),
+    0 10px 22px rgba(15, 118, 110, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================================
+   CARD TOP REFLECTION
+========================================================= */
+
+.card-top-reflection {
+  position: absolute;
+
+  top: 1px;
+  left: 24px;
+  right: 24px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.90);
+
+  z-index: 8;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD SHINE
+========================================================= */
+
+.card-shine-sweep {
+  position: absolute;
+
+  top: -100%;
+  left: -45%;
+
+  width: 35%;
+  height: 300%;
+
+  transform: rotate(22deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.34),
+      transparent
+    );
+
+  z-index: 7;
+
+  pointer-events: none;
+
+  transition:
+    left .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.glass-card-premium:hover
+.card-shine-sweep {
+  left: 125%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.doctors-page-header {
+  width: 100%;
+
+  padding-top: 156px;
+  padding-bottom: 90px;
+}
+
+
+.doctors-page-header-content {
+  max-width: 820px;
+
+  padding: 50px;
+}
+
+
+.doctors-eyebrow {
+  margin: 0;
+
+  color: #0354a5;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: .14em;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+.doctors-page-title {
+  max-width: 820px;
+
+  margin: 18px 0 0;
+
+  color: #061a31;
+
+  font-size:
+    clamp(42px, 5vw, 68px);
+
+  font-weight: 600;
+
+  line-height: 1.04;
+
+  letter-spacing: -.045em;
+}
+
+
+.doctors-page-description {
+  max-width: 680px;
+
+  margin: 24px 0 0;
+
+  color: #60758b;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   DOCTORS SECTION
+========================================================= */
+
+.doctors-section {
+  width: 100%;
+
+  padding-top: 20px;
+  padding-bottom: 110px;
+}
+
+
+.doctors-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   DOCTOR CARD
+========================================================= */
+
+.doctor-card {
+  min-width: 0;
+
+  padding: 0;
+
+  border-radius: 30px;
+}
+
+
+/* =========================================================
+   DOCTOR IMAGE
+========================================================= */
+
+.doctor-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #edf9ff,
+      #e0f5ff
+    );
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.75);
+}
+
+
+.doctor-photo {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: top center;
+
+  transition:
+    transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.doctor-card:hover
+.doctor-photo {
+  transform: scale(1.045);
+}
+
+
+/* =========================================================
+   IMAGE LIGHT
+========================================================= */
+
+.doctor-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  top: -150px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, 0.22),
+      transparent 70%
+    );
+
+  z-index: 2;
+}
+
+
+.doctor-image::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(7, 87, 166, 0.14),
+      transparent 70%
+    );
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.doctor-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 50%,
+      rgba(3, 70, 129, 0.20) 100%
+    );
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  transition:
+    opacity .5s ease;
+}
+
+
+.doctor-card:hover
+.doctor-image-overlay {
+  opacity: .65;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.doctor-placeholder {
+  position: relative;
+
+  z-index: 4;
+
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0354a5;
+
+  border:
+    1px solid rgba(255, 255, 255, .85);
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, .97),
+      rgba(240, 253, 250, .84)
+    );
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 18px 40px rgba(3, 84, 165, .10),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+
+  transition:
+    transform .5s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .5s ease;
+}
+
+
+.doctor-card:hover
+.doctor-placeholder {
+  transform:
+    scale(1.06)
+    rotate(2deg);
+
+  box-shadow:
+    0 22px 48px rgba(3, 84, 165, .15),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+
+/* =========================================================
+   SPECIALTY BADGE
+========================================================= */
+
+.doctor-specialty-badge {
+  position: absolute;
+
+  left: 20px;
+  bottom: 18px;
+
+  z-index: 5;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    8px 13px;
+
+  color: #ffffff;
+
+  border:
+    1px solid rgba(255, 255, 255, .35);
+
+  border-radius: 999px;
+
+  background:
+    rgba(3, 70, 129, .58);
+
+  backdrop-filter:
+    blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
+
+  box-shadow:
+    0 8px 20px rgba(3, 70, 129, .14);
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+
+.specialty-dot {
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #8de4ff;
+
+  box-shadow:
+    0 0 0 4px rgba(141, 228, 255, .14);
+}
+
+
+/* =========================================================
+   DOCTOR CONTENT
+========================================================= */
+
+.doctor-content {
+  padding:
+    31px 30px 30px;
+}
+
+
+.doctor-specialty {
+  margin: 0;
+
+  color: #0354a5;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+}
+
+
+.doctor-name {
+  margin:
+    9px 0 0;
+
+  color: #102a43;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  letter-spacing: -.025em;
+}
+
+
+.doctor-qualification {
+  margin:
+    7px 0 0;
+
+  color: #60758b;
+
+  font-size: 13px;
+
+  font-weight: 650;
+}
+
+
+.doctor-description {
+  max-width: 500px;
+
+  margin:
+    16px 0 0;
+
+  color: #60758b;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   =========================================================
+   PREMIUM BUTTON SYSTEM
+   =========================================================
+========================================================= */
+
+.premium-button {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  min-height: 66px;
+
+  margin-top: 26px;
+
+  padding:
+    7px 7px 7px 20px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border:
+    1px solid rgba(255, 255, 255, .28);
+
+  border-radius: 20px;
+
+  box-sizing: border-box;
+
+  isolation: isolate;
+
+  transition:
+    transform .45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .45s ease,
+    border-color .45s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BLUE BUTTON
+========================================================= */
+
+.premium-button-primary {
+
+  background:
+    linear-gradient(
+      135deg,
+      #0354a5 0%,
+      #086cba 48%,
+      #0b82cf 100%
+    );
+
+  box-shadow:
+    0 16px 34px rgba(3, 84, 165, .18),
+    0 5px 12px rgba(3, 84, 165, .08),
+    inset 0 1px 0 rgba(255, 255, 255, .28),
+    inset 0 -1px 0 rgba(0, 0, 0, .08);
+}
+
+
+.premium-button-primary:hover {
+
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(255, 255, 255, .48);
+
+  box-shadow:
+    0 23px 44px rgba(3, 84, 165, .23),
+    0 8px 18px rgba(3, 84, 165, .11),
+    inset 0 1px 0 rgba(255, 255, 255, .35),
+    inset 0 -1px 0 rgba(0, 0, 0, .08);
+}
+
+
+/* =========================================================
+   BUTTON TOP LINE
+========================================================= */
+
+.premium-button::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 1px;
+
+  left: 20px;
+  right: 20px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, .40);
+
+  pointer-events: none;
+
+  z-index: 4;
+}
+
+
+/* =========================================================
+   BUTTON CONTENT
+========================================================= */
+
+.premium-button-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+
+.premium-button-label {
+
+  color:
+    rgba(255, 255, 255, .68);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: .10em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+.premium-button-text {
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  line-height: 1.15;
+
+  letter-spacing: -.01em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+.premium-button-arrow {
+
+  position: relative;
+
+  z-index: 6;
+
+  flex:
+    0 0 50px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0354a5;
+
+  border:
+    1px solid rgba(255, 255, 255, .80);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f0fbff 100%
+    );
+
+  box-shadow:
+    0 7px 16px rgba(0, 35, 70, .13),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+
+  transition:
+    transform .45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .45s ease;
+}
+
+
+.premium-button:hover
+.premium-button-arrow {
+
+  transform:
+    translateX(2px);
+
+  box-shadow:
+    0 10px 21px rgba(0, 35, 70, .17),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+
+/* =========================================================
+   BUTTON SHINE
+========================================================= */
+
+.premium-button-shine {
+
+  position: absolute;
+
+  top: -100%;
+
+  left: -50%;
+
+  width: 32%;
+
+  height: 300%;
+
+  transform:
+    rotate(22deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, .22),
+      transparent
+    );
+
+  pointer-events: none;
+
+  z-index: 3;
+
+  transition:
+    left .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.premium-button:hover
+.premium-button-shine {
+
+  left: 125%;
+}
+
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.doctors-cta {
+
+  width: 100%;
+
+  padding:
+    20px 0 110px;
+}
+
+
+.doctors-cta-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    82px 40px;
+
+  border:
+    1px solid rgba(255, 255, 255, .34);
+
+  border-radius: 36px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #034681 0%,
+      #0757a6 42%,
+      #0b78c7 72%,
+      #3cc3fc 100%
+    );
+
+  box-shadow:
+    0 30px 65px rgba(3, 84, 165, .23),
+    0 10px 25px rgba(3, 84, 165, .10),
+    inset 0 1px 0 rgba(255, 255, 255, .38),
+    inset 0 -1px 0 rgba(0, 0, 0, .10);
+}
+
+
+/* =========================================================
+   CTA GLOW
+========================================================= */
+
+.cta-glow {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+.cta-glow-one {
+
+  width: 420px;
+  height: 420px;
+
+  top: -240px;
+  right: -80px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, .18),
+      transparent 70%
+    );
+}
+
+
+.cta-glow-two {
+
+  width: 360px;
+  height: 360px;
+
+  bottom: -230px;
+  left: -100px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, .22),
+      transparent 70%
+    );
+}
+
+
+/* =========================================================
+   CTA TOP HIGHLIGHT
+========================================================= */
+
+.cta-top-highlight {
+
+  position: absolute;
+
+  top: 1px;
+
+  left: 30px;
+  right: 30px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, .42);
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.doctors-cta-inner {
+
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  text-align: center;
+}
+
+
+.cta-eyebrow {
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, .76);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .15em;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+.doctors-cta-title {
+
+  margin:
+    13px 0 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(34px, 4vw, 50px);
+
+  font-weight: 650;
+
+  line-height: 1.08;
+
+  letter-spacing: -.04em;
+}
+
+
+.doctors-cta-description {
+
+  max-width: 590px;
+
+  margin:
+    19px auto 0;
+
+  color:
+    rgba(232, 248, 255, .92);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.premium-button-cta {
+
+  width: 330px;
+
+  min-height: 70px;
+
+  margin:
+    34px auto 0;
+
+  padding:
+    8px 8px 8px 23px;
+
+  border:
+    1px solid rgba(255, 255, 255, .58);
+
+  border-radius: 21px;
+
+  background:
+    rgba(255, 255, 255, .13);
+
+  backdrop-filter:
+    blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
+
+  box-shadow:
+    0 16px 34px rgba(0, 32, 75, .18),
+    inset 0 1px 0 rgba(255, 255, 255, .32);
+}
+
+
+.premium-button-cta:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(255, 255, 255, .19);
+
+  border-color:
+    rgba(255, 255, 255, .78);
+
+  box-shadow:
+    0 23px 44px rgba(0, 32, 75, .24),
+    inset 0 1px 0 rgba(255, 255, 255, .40);
+}
+
+
+.premium-button-cta
+.premium-button-arrow {
+
+  width: 52px;
+  height: 52px;
+
+  flex-basis: 52px;
+
+  border-radius: 16px;
+}
+
+
+.premium-button-cta
+.premium-button-text {
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .doctors-page-header {
+
+    padding-top: 166px;
+    padding-bottom: 105px;
+  }
+
+
+  .doctors-section {
+
+    padding-bottom: 120px;
+  }
+
+
+  .doctors-grid {
+
+    gap: 28px;
+  }
+
+
+  .doctors-cta {
+
+    padding-bottom: 120px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1023px) {
+
+  .doctors-page-header {
+
+    padding-top: 138px;
+    padding-bottom: 75px;
+  }
+
+
+  .doctors-section {
+
+    padding-bottom: 90px;
+  }
+
+
+  .doctors-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+
+  .doctor-content {
+
+    padding:
+      28px 25px 27px;
+  }
+
+
+  .doctors-cta-card {
+
+    padding:
+      70px 30px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .doctors-page-header {
+
+    padding-top: 122px;
+    padding-bottom: 64px;
+  }
+
+
+  .doctors-page-header-content {
+
+    padding:
+      32px 20px;
+
+    border-radius: 24px;
+  }
+
+
+  .doctors-page-title {
+
+    margin-top: 14px;
+
+    font-size:
+      clamp(36px, 10vw, 48px);
+  }
+
+
+  .doctors-page-description {
+
+    margin-top: 18px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  .doctors-section {
+
+    padding-bottom: 70px;
+  }
+
+
+  .doctors-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .doctor-card {
+
+    border-radius: 24px;
+  }
+
+
+  .doctor-image {
+
+    aspect-ratio: 4 / 3;
+  }
+
+
+  .doctor-placeholder {
+
+    width: 88px;
+    height: 88px;
+  }
+
+
+  .doctor-content {
+
+    padding:
+      26px 21px 22px;
+  }
+
+
+  .doctor-name {
+
+    font-size: 21px;
+  }
+
+
+  .doctor-description {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .doctor-specialty-badge {
+
+    left: 15px;
+    bottom: 15px;
+
+    padding:
+      7px 11px;
+
+    font-size: 8px;
+  }
+
+
+  /* ---------------------------------------------
+     MOBILE BUTTON
+  --------------------------------------------- */
+
+  .premium-button {
+
+    min-height: 62px;
+
+    margin-top: 21px;
+
+    padding:
+      6px 6px 6px 16px;
+
+    border-radius: 18px;
+
+    gap: 14px;
+  }
+
+
+  .premium-button-arrow {
+
+    width: 48px;
+    height: 48px;
+
+    flex-basis: 48px;
+
+    border-radius: 14px;
+  }
+
+
+  .premium-button-label {
+
+    font-size: 7px;
+  }
+
+
+  .premium-button-text {
+
+    font-size: 11px;
+  }
+
+
+  /* ---------------------------------------------
+     CTA
+  --------------------------------------------- */
+
+  .doctors-cta {
+
+    padding-bottom: 70px;
+  }
+
+
+  .doctors-cta-card {
+
+    padding:
+      58px 20px;
+
+    border-radius: 28px;
+  }
+
+
+  .doctors-cta-title {
+
+    font-size: 34px;
+  }
+
+
+  .doctors-cta-description {
+
+    font-size: 15px;
+  }
+
+
+  .premium-button-cta {
+
+    width: 100%;
+
+    min-height: 64px;
+
+    margin-top: 30px;
+  }
+
+
+  .premium-button-cta
+  .premium-button-arrow {
+
+    width: 49px;
+    height: 49px;
+
+    flex-basis: 49px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .doctors-page-header {
+
+    padding-top: 116px;
+    padding-bottom: 58px;
+  }
+
+
+  .doctors-page-title {
+
+    font-size: 34px;
+  }
+
+
+  .doctor-content {
+
+    padding:
+      23px 18px 19px;
+  }
+
+
+  .doctors-cta-title {
+
+    font-size: 30px;
+  }
+
+
+  .premium-button {
+
+    gap: 10px;
+
+    padding-left: 14px;
+  }
+
+
+  .premium-button-arrow {
+
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+
+    border-radius: 13px;
+  }
+
+
+  .premium-button-text {
+
+    font-size: 10.5px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .glass-card-premium,
+  .card-shine-sweep,
+  .doctor-photo,
+  .doctor-placeholder,
+  .premium-button,
+  .premium-button-arrow,
+  .premium-button-shine {
+
+    transition: none;
+  }
+
+}
+
+</style>

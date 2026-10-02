@@ -1,0 +1,461 @@
+---
+import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+const year = new Date().getFullYear();
+---
+
+<footer class="hospital-footer">
+  <div class="hospital-footer-main">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+          <a href="/" class="footer-logo" aria-label="Health Vision Hospital Home">
+            <div class="footer-logo-mark">H</div>
+            <div class="footer-logo-text">
+              <span class="footer-hospital-name">Health Vision</span>
+              <span class="footer-hospital-type">HOSPITAL</span>
+            </div>
+          </a>
+
+          <p class="footer-description">
+            Providing dependable healthcare with compassionate care,
+            professional medical services and a patient-focused approach.
+          </p>
+
+          <a href="/appointment" class="footer-appointment-link">
+            <span>Book an Appointment</span>
+            <ArrowUpRight size={16} strokeWidth={1.8} />
+          </a>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+          <h2 class="footer-heading">Quick Links</h2>
+          <nav class="footer-links" aria-label="Quick Links">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/services">Services</a>
+            <a href="/doctors">Doctors</a>
+            <a href="/facilities">Facilities</a>
+            <a href="/gallery">Gallery</a>
+          </nav>
+        </div>
+
+        <!-- PATIENT SERVICES -->
+        <div class="footer-column">
+          <h2 class="footer-heading">Patient Services</h2>
+          <nav class="footer-links" aria-label="Patient Services">
+            <a href="/appointment">Book Appointment</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms">Terms &amp; Conditions</a>
+          </nav>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+          <h2 class="footer-heading">Contact</h2>
+
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <MapPin size={18} strokeWidth={1.7} />
+              <address>
+                Hospital Address<br />
+                Kerala, India
+              </address>
+            </div>
+
+            <a href="tel:+919999999999" class="footer-contact-item">
+              <Phone size={18} strokeWidth={1.7} />
+              <span>+91 99999 99999</span>
+            </a>
+
+            <a href="mailto:info@healthvisionhospital.org" class="footer-contact-item">
+              <Mail size={18} strokeWidth={1.7} />
+              <span>info@healthvisionhospital.org</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <div class="footer-container">
+      <div class="footer-bottom-inner">
+        <p>© {year} Health Vision Hospital. All rights reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="/privacy-policy">Privacy</a>
+          <span aria-hidden="true">•</span>
+          <a href="/terms">Terms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* ---------- BASE (mobile-first) ---------- */
+
+  .hospital-footer,
+  .hospital-footer *,
+  .hospital-footer *::before,
+  .hospital-footer *::after {
+    box-sizing: border-box;
+  }
+
+  .hospital-footer {
+    width: 100%;
+    background: #06213D;
+    color: #ffffff;
+    overflow-x: clip;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .hospital-footer a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .hospital-footer-main {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+  }
+
+  .footer-container {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  /* Mobile: 2 columns. Brand + contact span full width */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 24px;
+    padding: 48px 0 40px;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  /* ---------- BRAND ---------- */
+
+  .footer-brand {
+    min-width: 0;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 100%;
+    color: #ffffff;
+  }
+
+  .footer-logo-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #0757A6 0%, #0B78C7 52%, #3CC3FC 100%);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(7, 87, 166, 0.20);
+  }
+
+  .footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    line-height: 1;
+  }
+
+  .footer-hospital-name {
+    display: block;
+    font-size: 16px;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .footer-hospital-type {
+    display: block;
+    margin-top: 6px;
+    color: #3CC3FC;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+  }
+
+  .footer-description {
+    max-width: 480px;
+    margin: 18px 0 0;
+    color: #A8B8C7;
+    font-size: 13px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-appointment-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 6px 0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.25s ease, gap 0.25s ease;
+  }
+
+  .footer-appointment-link:hover {
+    color: #3CC3FC;
+    gap: 11px;
+  }
+
+  .footer-appointment-link :global(svg) {
+    flex: 0 0 auto;
+  }
+
+  /* ---------- COLUMNS ---------- */
+
+  .footer-column {
+    min-width: 0;
+  }
+
+  .footer-heading {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .footer-links a {
+    max-width: 100%;
+    padding: 6px 0;
+    color: #A8B8C7;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: #3CC3FC;
+    transform: translateX(2px);
+  }
+
+  /* ---------- CONTACT ---------- */
+
+  .footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    color: #A8B8C7;
+    font-size: 13px;
+    line-height: 1.65;
+    transition: color 0.2s ease;
+  }
+
+  /* :global needed – lucide icons don't receive Astro's scope attribute */
+  .footer-contact-item :global(svg) {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    color: #3CC3FC;
+  }
+
+  .footer-contact-item span,
+  .footer-contact-item address {
+    min-width: 0;
+    margin: 0;
+    font-style: normal;
+    overflow-wrap: anywhere;
+  }
+
+  a.footer-contact-item:hover {
+    color: #ffffff;
+  }
+
+  /* ---------- BOTTOM ---------- */
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px 0 22px;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    color: #71869A;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+
+  .footer-bottom-links a {
+    color: #71869A;
+    font-size: 11px;
+    transition: color 0.2s ease;
+  }
+
+  .footer-bottom-links a:hover {
+    color: #3CC3FC;
+  }
+
+  .footer-bottom-links span {
+    color: #40566D;
+    font-size: 10px;
+  }
+
+  /* ---------- VERY SMALL PHONES: single column ---------- */
+
+  @media (max-width: 340px) {
+    .footer-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .footer-hospital-name {
+      font-size: 15px;
+    }
+  }
+
+  /* ---------- LARGE PHONES / SMALL TABLETS ---------- */
+
+  @media (min-width: 560px) {
+    .footer-container {
+      padding-inline: 24px;
+    }
+
+    .footer-grid {
+      padding: 56px 0 48px;
+    }
+  }
+
+  /* ---------- TABLET: 3 columns ---------- */
+
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 44px 40px;
+      padding: 60px 0 54px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+      max-width: 520px;
+    }
+
+    .footer-contact {
+      grid-column: auto;
+    }
+
+    .footer-logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+
+    .footer-hospital-name {
+      font-size: 17px;
+    }
+
+    .footer-description {
+      max-width: 340px;
+    }
+
+    .footer-bottom-inner {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 68px;
+      padding: 0;
+    }
+  }
+
+  /* ---------- DESKTOP: 4 columns ---------- */
+
+  @media (min-width: 1024px) {
+    .footer-container {
+      padding-inline: 20px;
+    }
+
+    .footer-grid {
+      grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(0, 0.8fr)
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+      gap: 60px;
+      padding: 68px 0 62px;
+    }
+
+    .footer-brand {
+      grid-column: auto;
+      max-width: 360px;
+    }
+
+    .footer-heading {
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      gap: 7px;
+    }
+  }
+
+  /* ---------- REDUCED MOTION ---------- */
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-appointment-link,
+    .footer-links a,
+    .footer-contact-item,
+    .footer-bottom-links a {
+      transition: none;
+    }
+  }
+</style>

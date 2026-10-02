@@ -1,0 +1,410 @@
+---
+import {
+  ArrowRight,
+  ArrowUpRight,
+  HeartPulse,
+  Stethoscope,
+  Microscope,
+} from "lucide-react";
+---
+
+<section class="services-ultra">
+
+  <!-- =====================================================
+       BACKGROUND AMBIENCE
+  ====================================================== -->
+
+  <div class="services-ambient services-ambient-one"></div>
+  <div class="services-ambient services-ambient-two"></div>
+
+
+  <div class="container-main">
+
+    <!-- ===================================================
+         SECTION HEADER
+    ==================================================== -->
+
+    <div class="services-header">
+
+      <div>
+
+        <div class="services-eyebrow">
+          <span class="services-eyebrow-line"></span>
+
+          <span class="services-eyebrow-dot"></span>
+
+          <span>Our Services</span>
+        </div>
+
+
+        <h2 class="services-title">
+          Integrated
+          <span>healthcare services.</span>
+        </h2>
+
+
+        <p class="services-description">
+          Professional medical care supported by modern
+          facilities and a patient-focused approach.
+        </p>
+
+      </div>
+
+
+      <a
+        href="/services"
+        class="services-view-all group"
+      >
+
+        <span>
+          View all services
+        </span>
+
+        <span class="services-view-icon">
+
+          <ArrowUpRight
+            size={16}
+            stroke-width={1.8}
+            class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          />
+
+        </span>
+
+      </a>
+
+    </div>
+
+
+    <!-- ===================================================
+         GLASS SERVICES STAGE
+    ==================================================== -->
+
+    <div class="services-stage">
+
+      <!-- Top glass reflection -->
+
+      <div class="services-stage-reflection"></div>
+
+
+      <!-- Ambient light inside stage -->
+
+      <div class="services-stage-glow services-stage-glow-one"></div>
+      <div class="services-stage-glow services-stage-glow-two"></div>
+
+
+      <!-- =================================================
+           SERVICE 01
+      ================================================== -->
+
+      <article
+        class="service-glass-card service-card-featured"
+      >
+
+        <div class="service-card-top">
+
+          <div class="service-icon">
+
+            <Stethoscope
+              size={23}
+              stroke-width={1.5}
+            />
+
+          </div>
+
+          <span class="service-number">
+            01
+          </span>
+
+        </div>
+
+
+        <div class="service-card-content">
+
+          <span class="service-category">
+            Primary Care
+          </span>
+
+          <h3>
+            General Medicine
+          </h3>
+
+          <p>
+            Medical consultation and treatment for a wide
+            range of health conditions.
+          </p>
+
+        </div>
+
+
+        <div class="service-card-footer">
+
+          <span>
+            Learn more
+          </span>
+
+          <ArrowRight
+            size={15}
+            stroke-width={1.8}
+          />
+
+        </div>
+
+
+        <div class="service-card-arrow">
+
+          <ArrowUpRight
+            size={17}
+            stroke-width={1.7}
+          />
+
+        </div>
+
+
+        <div class="service-card-shine"></div>
+
+      </article>
+
+
+      <!-- =================================================
+           SERVICE 02
+      ================================================== -->
+
+      <article
+        class="service-glass-card"
+      >
+
+        <div class="service-card-top">
+
+          <div class="service-icon">
+
+            <Microscope
+              size={23}
+              stroke-width={1.5}
+            />
+
+          </div>
+
+          <span class="service-number">
+            02
+          </span>
+
+        </div>
+
+
+        <div class="service-card-content">
+
+          <span class="service-category">
+            Diagnostics
+          </span>
+
+          <h3>
+            Diagnostic Services
+          </h3>
+
+          <p>
+            Diagnostic services supporting accurate medical
+            evaluation and clinical decisions.
+          </p>
+
+        </div>
+
+
+        <div class="service-card-footer">
+
+          <span>
+            Learn more
+          </span>
+
+          <ArrowRight
+            size={15}
+            stroke-width={1.8}
+          />
+
+        </div>
+
+
+        <div class="service-card-arrow">
+
+          <ArrowUpRight
+            size={17}
+            stroke-width={1.7}
+          />
+
+        </div>
+
+
+        <div class="service-card-shine"></div>
+
+      </article>
+
+
+      <!-- =================================================
+           SERVICE 03
+      ================================================== -->
+
+      <article
+        class="service-glass-card service-card-emergency"
+      >
+
+        <div class="service-card-top">
+
+          <div class="service-icon service-icon-emergency">
+
+            <HeartPulse
+              size={23}
+              stroke-width={1.5}
+            />
+
+          </div>
+
+          <span class="service-number">
+            03
+          </span>
+
+        </div>
+
+
+        <div class="service-card-content">
+
+          <span class="service-category">
+            Urgent Care
+          </span>
+
+          <h3>
+            Emergency Care
+          </h3>
+
+          <p>
+            Prompt medical attention for urgent healthcare
+            needs.
+          </p>
+
+        </div>
+
+
+        <div class="service-card-footer">
+
+          <span>
+            Learn more
+          </span>
+
+          <ArrowRight
+            size={15}
+            stroke-width={1.8}
+          />
+
+        </div>
+
+
+        <div class="service-card-arrow">
+
+          <ArrowUpRight
+            size={17}
+            stroke-width={1.7}
+          />
+
+        </div>
+
+
+        <div class="service-card-shine"></div>
+
+      </article>
+
+
+      <!-- =================================================
+           CENTER MICRO LABEL
+      ================================================== -->
+
+      <div class="services-stage-chip">
+
+        <span class="services-chip-dot"></span>
+
+        <span>
+          Patient-focused care
+        </span>
+
+      </div>
+
+
+      <!-- Bottom reflection -->
+
+      <div class="services-stage-bottom-line"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+  /*
+   * ========================================================
+   * SERVICE CARD CURSOR LIGHT
+   * ========================================================
+   */
+
+  const serviceCards =
+    document.querySelectorAll<HTMLElement>(
+      ".service-glass-card"
+    );
+
+
+  serviceCards.forEach((card) => {
+
+    card.addEventListener(
+      "pointermove",
+      (event) => {
+
+        if (
+          !event.isPrimary ||
+          event.pointerType === "touch"
+        ) {
+          return;
+        }
+
+
+        const rect =
+          card.getBoundingClientRect();
+
+
+        const x =
+          event.clientX - rect.left;
+
+        const y =
+          event.clientY - rect.top;
+
+
+        card.style.setProperty(
+          "--service-mouse-x",
+          `${x}px`
+        );
+
+        card.style.setProperty(
+          "--service-mouse-y",
+          `${y}px`
+        );
+
+      }
+    );
+
+
+    card.addEventListener(
+      "pointerleave",
+      () => {
+
+        card.style.setProperty(
+          "--service-mouse-x",
+          "50%"
+        );
+
+        card.style.setProperty(
+          "--service-mouse-y",
+          "50%"
+        );
+
+      }
+    );
+
+  });
+</script>

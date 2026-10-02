@@ -1,0 +1,694 @@
+---
+import {
+  ArrowRight,
+  ArrowUpRight,
+  HeartPulse,
+  ShieldCheck,
+  Building2,
+} from "lucide-react";
+---
+
+<section class="hero-section medical-bg relative overflow-hidden">
+
+  <!-- =====================================================
+       HERO CONTENT
+       ===================================================== -->
+
+  <div class="container-main hero-container">
+
+    <!-- ===================================================
+         LEFT CONTENT
+         =================================================== -->
+
+    <div class="hero-content">
+
+      <!-- Badge -->
+
+      <div
+        class="glass hero-badge inline-flex items-center gap-2 rounded-full"
+      >
+        <span
+          class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0757A6]"
+        ></span>
+
+        <span>
+          Trusted Healthcare • Compassionate Care
+        </span>
+      </div>
+
+
+      <!-- Heading -->
+
+      <h1 class="hero-title">
+        Your Health.
+        <span>Our Vision.</span>
+      </h1>
+
+
+      <!-- Description -->
+
+      <p class="hero-description">
+        Providing quality healthcare with modern facilities,
+        experienced professionals, and compassionate patient care.
+      </p>
+
+
+      <!-- =================================================
+           BUTTONS
+           ================================================= -->
+
+      <div class="hero-actions">
+
+        <!-- BOOK APPOINTMENT -->
+
+        <a
+          href="/appointment"
+          class="btn-premium"
+        >
+          <span class="btn-premium-content">
+
+            <span class="btn-premium-label">
+              Healthcare
+            </span>
+
+            <span class="btn-premium-text">
+              Book an Appointment
+            </span>
+
+          </span>
+
+          <span class="btn-premium-arrow">
+            <ArrowUpRight
+              size={20}
+              stroke-width={2}
+            />
+          </span>
+
+          <span class="btn-premium-shine"></span>
+        </a>
+
+
+        <!-- EXPLORE SERVICES -->
+
+        <a
+          href="/services"
+          class="btn-premium"
+        >
+          <span class="btn-premium-content">
+
+            <span class="btn-premium-label">
+              Discover
+            </span>
+
+            <span class="btn-premium-text">
+              Explore Services
+            </span>
+
+          </span>
+
+          <span class="btn-premium-arrow">
+            <ArrowRight
+              size={20}
+              stroke-width={2}
+            />
+          </span>
+
+          <span class="btn-premium-shine"></span>
+        </a>
+
+      </div>
+
+
+      <!-- =================================================
+           SMALL FEATURES
+           ================================================= -->
+
+      <div class="hero-features">
+
+        <!-- Patient-focused care -->
+
+        <div class="hero-feature">
+
+          <ShieldCheck
+            size={17}
+            class="shrink-0 text-[#0757A6]"
+          />
+
+          <span>
+            Patient-focused care
+          </span>
+
+        </div>
+
+
+        <span class="hero-feature-divider"></span>
+
+
+        <!-- Quality healthcare -->
+
+        <div class="hero-feature">
+
+          <HeartPulse
+            size={17}
+            class="shrink-0 text-[#0B78C7]"
+          />
+
+          <span>
+            Quality healthcare
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         RIGHT VISUAL
+         =================================================== -->
+
+    <div class="hero-visual">
+
+      <!-- Soft outer glow -->
+
+      <div class="hero-image-glow"></div>
+
+
+      <!-- Glass image container -->
+
+      <div class="glass-strong hero-image-shell">
+
+        <div class="hero-image-placeholder">
+
+          <!-- Background light -->
+
+          <div class="hero-image-gradient"></div>
+
+
+          <!-- Placeholder content -->
+
+          <div class="hero-image-content">
+
+            <Building2
+              size={44}
+              stroke-width={1.25}
+              class="text-[#0757A6]"
+            />
+
+            <p class="hero-image-title">
+              Hospital Image
+            </p>
+
+            <p class="hero-image-subtitle">
+              Replace with hospital photograph
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           FLOATING CARD
+           ================================================= -->
+
+      <div
+        class="glass-card hero-floating-card hidden rounded-2xl sm:block"
+      >
+
+        <p class="hero-floating-label">
+          Patient-focused
+        </p>
+
+        <p class="hero-floating-title">
+          Quality Healthcare
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+  /*
+   * =======================================================
+   * GLASS CARD CURSOR LIGHT
+   * =======================================================
+   */
+
+  const glassCards =
+    document.querySelectorAll<HTMLElement>(".glass-card");
+
+
+  glassCards.forEach((card) => {
+
+    card.addEventListener("pointermove", (event) => {
+
+      if (
+        !event.isPrimary ||
+        event.pointerType === "touch"
+      ) {
+        return;
+      }
+
+
+      const rect =
+        card.getBoundingClientRect();
+
+
+      const x =
+        event.clientX - rect.left;
+
+
+      const y =
+        event.clientY - rect.top;
+
+
+      card.style.setProperty(
+        "--mouse-x",
+        `${x}px`
+      );
+
+
+      card.style.setProperty(
+        "--mouse-y",
+        `${y}px`
+      );
+
+    });
+
+
+    card.addEventListener("pointerleave", () => {
+
+      card.style.setProperty(
+        "--mouse-x",
+        "50%"
+      );
+
+
+      card.style.setProperty(
+        "--mouse-y",
+        "50%"
+      );
+
+    });
+
+  });
+</script>
+
+
+<style>
+  /*
+   * =======================================================
+   * HERO BLUE / CYAN THEME
+   * =======================================================
+   *
+   * Primary Blue  : #0757A6
+   * Deep Blue     : #034681
+   * Blue          : #0B78C7
+   * Cyan          : #3CC3FC
+   * Light Blue    : #EAF8FF
+   *
+   * These colors are matched to the supplied
+   * Health Vision Hospital logo.
+   * =======================================================
+   */
+
+
+  /* =======================================================
+     HERO SECTION
+     ======================================================= */
+
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     MEDICAL BACKGROUND
+     ======================================================= */
+
+  .medical-bg {
+    background:
+      linear-gradient(
+        180deg,
+        #edf8ff 0%,
+        #f7fbff 48%,
+        #f5f9fd 100%
+      );
+  }
+
+
+  /* =======================================================
+     BLUE AMBIENT BACKGROUND
+     ======================================================= */
+
+  .medical-bg::before {
+    content: "";
+
+    position: absolute;
+
+    width: 480px;
+    height: 480px;
+
+    left: -180px;
+    top: 80px;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(60, 195, 252, 0.075),
+        transparent 70%
+      );
+
+    pointer-events: none;
+  }
+
+
+  .medical-bg::after {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: -220px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(7, 87, 166, 0.065),
+        transparent 70%
+      );
+
+    pointer-events: none;
+  }
+
+
+  /* =======================================================
+     HERO CONTAINER
+     ======================================================= */
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  /* =======================================================
+     HERO BADGE
+     ======================================================= */
+
+  .hero-badge {
+    border-color:
+      rgba(7, 87, 166, 0.10);
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.78),
+        rgba(234, 248, 255, 0.60)
+      );
+
+    box-shadow:
+      0 8px 28px rgba(7, 87, 166, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  }
+
+
+  /* =======================================================
+     HERO TITLE
+     ======================================================= */
+
+  .hero-title {
+    color: #061a31;
+  }
+
+
+  .hero-title span {
+    background:
+      linear-gradient(
+        100deg,
+        #034681 0%,
+        #0757A6 48%,
+        #0B78C7 75%,
+        #3CC3FC 100%
+      );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  /* =======================================================
+     HERO DESCRIPTION
+     ======================================================= */
+
+  .hero-description {
+    color: #60758b;
+  }
+
+
+  /* =======================================================
+     HERO FEATURES
+     ======================================================= */
+
+  .hero-features {
+    color: #60758b;
+  }
+
+
+  .hero-feature-divider {
+    background: #c7dbea;
+  }
+
+
+  /* =======================================================
+     PREMIUM BUTTON
+     ======================================================= */
+
+  .btn-premium {
+    background:
+      linear-gradient(
+        135deg,
+        #0B78C7 0%,
+        #0757A6 52%,
+        #034681 100%
+      );
+
+    box-shadow:
+      0 22px 50px rgba(7, 87, 166, 0.22),
+      0 7px 18px rgba(7, 87, 166, 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 0.30),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+  }
+
+
+  .btn-premium:hover {
+    box-shadow:
+      0 30px 62px rgba(7, 87, 166, 0.28),
+      0 10px 22px rgba(7, 87, 166, 0.13),
+      inset 0 1px 0 rgba(255, 255, 255, 0.38),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+  }
+
+
+  .btn-premium-arrow {
+    color: #0757A6;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.99),
+        rgba(234, 248, 255, 0.92)
+      );
+  }
+
+
+  /* =======================================================
+     IMAGE AREA
+     ======================================================= */
+
+  .hero-image-glow {
+    background:
+      radial-gradient(
+        circle,
+        rgba(60, 195, 252, 0.18),
+        rgba(7, 87, 166, 0.05) 48%,
+        transparent 72%
+      );
+
+    filter: blur(28px);
+  }
+
+
+  .hero-image-placeholder {
+    background:
+      linear-gradient(
+        135deg,
+        #eaf8ff 0%,
+        #f8fcff 48%,
+        #e9f6ff 100%
+      );
+  }
+
+
+  /* =======================================================
+     IMAGE GRADIENT
+     ======================================================= */
+
+  .hero-image-gradient {
+    background:
+      linear-gradient(
+        135deg,
+        rgba(60, 195, 252, 0.24),
+        rgba(255, 255, 255, 0.30) 48%,
+        rgba(7, 87, 166, 0.12)
+      );
+  }
+
+
+  /* =======================================================
+     IMAGE CONTENT
+     ======================================================= */
+
+  .hero-image-title {
+    color: #034681;
+  }
+
+
+  .hero-image-subtitle {
+    color: rgba(7, 87, 166, 0.62);
+  }
+
+
+  /* =======================================================
+     FLOATING CARD
+     ======================================================= */
+
+  .hero-floating-card {
+    border-color:
+      rgba(255, 255, 255, 0.82);
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.78),
+        rgba(234, 248, 255, 0.62)
+      );
+
+    box-shadow:
+      0 18px 45px rgba(7, 87, 166, 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  }
+
+
+  .hero-floating-label {
+    color: #71869A;
+  }
+
+
+  .hero-floating-title {
+    color: #06213D;
+  }
+
+
+  /* =======================================================
+     GLASS EFFECT
+     ======================================================= */
+
+  .hero-section .glass {
+    border:
+      1px solid rgba(255, 255, 255, 0.82);
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.72),
+        rgba(234, 248, 255, 0.52)
+      );
+
+    box-shadow:
+      0 8px 30px rgba(7, 87, 166, 0.055),
+      inset 0 1px 0 rgba(255, 255, 255, 0.90);
+  }
+
+
+  .hero-section .glass-strong {
+    border:
+      1px solid rgba(255, 255, 255, 0.90);
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.82),
+        rgba(234, 248, 255, 0.64)
+      );
+
+    box-shadow:
+      0 12px 40px rgba(7, 87, 166, 0.075),
+      inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  }
+
+
+  /* =======================================================
+     RESPONSIVE
+     ======================================================= */
+
+  @media (max-width: 767px) {
+
+    .hero-title {
+      font-size: clamp(
+        42px,
+        11vw,
+        58px
+      );
+    }
+
+    .hero-description {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero-actions .btn-premium {
+      width: 100%;
+    }
+
+  }
+
+
+  /* =======================================================
+     REDUCED MOTION
+     ======================================================= */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .btn-premium,
+    .btn-premium-arrow {
+      transition: none;
+    }
+
+  }
+</style>

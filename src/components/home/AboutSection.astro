@@ -1,0 +1,312 @@
+---
+import {
+  ArrowUpRight,
+  ShieldCheck,
+  HeartPulse,
+} from "lucide-react";
+---
+
+<section class="about-ultra">
+
+  <!-- Ambient background -->
+  <div class="about-orb about-orb-one"></div>
+  <div class="about-orb about-orb-two"></div>
+
+
+  <!-- =====================================================
+       SAME GLOBAL CONTAINER AS HERO / QUICK INFO / SERVICES
+  ====================================================== -->
+
+  <div class="container-main about-container">
+
+    <!-- =====================================================
+         LEFT SIDE
+    ====================================================== -->
+
+    <div class="about-copy">
+
+      <!-- Eyebrow -->
+      <div class="about-eyebrow">
+
+        <span class="about-eyebrow-line"></span>
+
+        <span class="about-eyebrow-dot"></span>
+
+        <span>About Us</span>
+
+      </div>
+
+
+      <!-- Heading -->
+      <h2 class="about-title">
+
+        Healthcare built
+        <span>around you.</span>
+
+      </h2>
+
+
+      <!-- Description -->
+      <p class="about-description">
+
+        At Health Vision Hospital, our focus is on delivering
+        dependable healthcare while ensuring every patient receives
+        respectful and compassionate attention.
+
+      </p>
+
+
+      <!-- =================================================
+           PREMIUM BUTTON
+      ================================================== -->
+
+      <a
+        href="/about"
+        class="btn-premium about-button"
+        aria-label="Learn more about Health Vision Hospital"
+      >
+
+        <span class="btn-premium-content">
+
+          <span class="btn-premium-label">
+            About Us
+          </span>
+
+          <span class="btn-premium-text">
+            Learn More About Us
+          </span>
+
+        </span>
+
+
+        <span class="btn-premium-arrow">
+
+          <ArrowUpRight
+            size={20}
+            stroke-width={2}
+          />
+
+        </span>
+
+
+        <span class="btn-premium-shine"></span>
+
+      </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         RIGHT SIDE
+    ====================================================== -->
+
+    <div class="about-visual">
+
+      <!-- Decorative orbit -->
+      <div class="about-orbit about-orbit-one"></div>
+
+      <div class="about-orbit about-orbit-two"></div>
+
+
+      <!-- Ambient circular glass -->
+      <div class="about-glass-orb">
+
+        <div class="about-orb-inner"></div>
+
+      </div>
+
+
+      <!-- ===================================================
+           CARD 01
+      ==================================================== -->
+
+      <article class="about-glass-card about-card-one">
+
+        <div class="about-card-icon">
+
+          <div class="about-icon-ring"></div>
+
+          <ShieldCheck
+            size={23}
+            stroke-width={1.6}
+          />
+
+        </div>
+
+
+        <div class="about-card-content">
+
+          <span class="about-card-number">
+            01
+          </span>
+
+          <h3>
+            Patient-first approach
+          </h3>
+
+          <p>
+            Respectful and compassionate attention.
+          </p>
+
+        </div>
+
+
+        <div class="about-card-arrow">
+
+          <ArrowUpRight
+            size={16}
+            stroke-width={1.7}
+          />
+
+        </div>
+
+
+        <div class="about-card-shine"></div>
+
+      </article>
+
+
+      <!-- ===================================================
+           CARD 02
+      ==================================================== -->
+
+      <article class="about-glass-card about-card-two">
+
+        <div class="about-card-icon">
+
+          <div class="about-icon-ring"></div>
+
+          <HeartPulse
+            size={23}
+            stroke-width={1.6}
+          />
+
+        </div>
+
+
+        <div class="about-card-content">
+
+          <span class="about-card-number">
+            02
+          </span>
+
+          <h3>
+            Quality healthcare
+          </h3>
+
+          <p>
+            Professional care in a modern environment.
+          </p>
+
+        </div>
+
+
+        <div class="about-card-arrow">
+
+          <ArrowUpRight
+            size={16}
+            stroke-width={1.7}
+          />
+
+        </div>
+
+
+        <div class="about-card-shine"></div>
+
+      </article>
+
+
+      <!-- ===================================================
+           FLOATING MICRO CARD
+      ==================================================== -->
+
+      <div class="about-floating-chip">
+
+        <span class="about-chip-dot"></span>
+
+        <span>
+          Care for a healthier tomorrow
+        </span>
+
+      </div>
+
+
+      <!-- Bottom decorative glass element -->
+
+      <div class="about-floating-orb">
+
+        <HeartPulse
+          size={17}
+          stroke-width={1.5}
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+  const aboutCards =
+    document.querySelectorAll<HTMLElement>(
+      ".about-glass-card"
+    );
+
+  aboutCards.forEach((card) => {
+
+    card.addEventListener(
+      "pointermove",
+      (event) => {
+
+        if (
+          !event.isPrimary ||
+          event.pointerType === "touch"
+        ) {
+          return;
+        }
+
+        const rect =
+          card.getBoundingClientRect();
+
+        const x =
+          event.clientX - rect.left;
+
+        const y =
+          event.clientY - rect.top;
+
+        card.style.setProperty(
+          "--about-mouse-x",
+          `${x}px`
+        );
+
+        card.style.setProperty(
+          "--about-mouse-y",
+          `${y}px`
+        );
+
+      }
+    );
+
+
+    card.addEventListener(
+      "pointerleave",
+      () => {
+
+        card.style.setProperty(
+          "--about-mouse-x",
+          "50%"
+        );
+
+        card.style.setProperty(
+          "--about-mouse-y",
+          "50%"
+        );
+
+      }
+    );
+
+  });
+</script>

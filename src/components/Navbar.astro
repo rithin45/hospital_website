@@ -1,0 +1,727 @@
+
+---
+import {
+  Phone,
+  Menu,
+  X,
+  ArrowUpRight,
+} from "lucide-react";
+---
+
+<header id="site-header" class="site-header">
+  <div id="navbar-shell" class="navbar-shell">
+
+    <!-- =====================================================
+         MAIN NAVBAR
+    ====================================================== -->
+
+    <div id="full-navbar" class="full-navbar">
+
+      <!-- ===================================================
+           NORMAL LEFT BRAND
+      ==================================================== -->
+
+      <a
+        href="/"
+        class="brand-normal"
+        aria-label="Health Vision Hospital Home"
+      >
+        <div class="logo-mark">
+          <img src="/src/assets/logooo.png" alt="" srcset="">
+        </div>
+
+        <div class="brand-text">
+          <p>Health Vision</p>
+          <span>HOSPITAL</span>
+        </div>
+      </a>
+
+
+      <!-- ===================================================
+           CENTERED DYNAMIC ISLAND BRAND
+
+           This is a separate element.
+
+           It NEVER moves from left/right.
+           It is always mathematically centered.
+      ==================================================== -->
+
+      <a
+        href="/"
+        class="brand-island"
+        aria-label="Health Vision Hospital Home"
+      >
+        <div class="logo-mark">
+          <img src="/src/assets/logooo.png" alt="" srcset="">
+        </div>
+
+        <div class="brand-text">
+          <p>Health Vision</p>
+          <span>HOSPITAL</span>
+        </div>
+      </a>
+
+
+      <!-- ===================================================
+           DESKTOP NAVIGATION
+      ==================================================== -->
+
+      <nav
+        class="desktop-navigation"
+        aria-label="Main navigation"
+      >
+        <a href="/" class="nav-item nav-active">
+          Home
+        </a>
+
+        <a href="/about" class="nav-item">
+          About
+        </a>
+
+        <a href="/services" class="nav-item">
+          Services
+        </a>
+
+        <a href="/doctors" class="nav-item">
+          Doctors
+        </a>
+
+        <a href="/facilities" class="nav-item">
+          Facilities
+        </a>
+
+        <a href="/gallery" class="nav-item">
+          Gallery
+        </a>
+
+        <a href="/contact" class="nav-item">
+          Contact
+        </a>
+      </nav>
+
+
+      <!-- ===================================================
+           DESKTOP ACTIONS
+      ==================================================== -->
+
+      <div class="desktop-actions">
+
+        <a
+          href="tel:+919999999999"
+          class="call-button"
+          aria-label="Call Health Vision Hospital"
+        >
+          <Phone size={16} />
+          <span>Call</span>
+        </a>
+
+
+        <!-- PREMIUM APPOINTMENT BUTTON -->
+
+        <a
+          href="/appointment"
+          class="btn-premium"
+        >
+          <span class="btn-premium-content">
+
+            <span class="btn-premium-label">
+              Healthcare
+            </span>
+
+            <span class="btn-premium-text">
+              Book Appointment
+            </span>
+
+          </span>
+
+          <span class="btn-premium-arrow">
+            <ArrowUpRight
+              size={20}
+              stroke-width={2}
+            />
+          </span>
+
+          <span class="btn-premium-shine"></span>
+        </a>
+
+      </div>
+
+
+      <!-- ===================================================
+           MOBILE MENU BUTTON
+      ==================================================== -->
+
+      <button
+        id="mobile-menu-button"
+        type="button"
+        class="menu-button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="menu-icon-wrapper">
+
+          <Menu
+            id="menu-icon"
+            size={21}
+            stroke-width={1.8}
+          />
+
+          <X
+            id="close-icon"
+            size={21}
+            stroke-width={1.8}
+          />
+
+        </span>
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE MENU
+
+         IMPORTANT:
+         This is completely separate from Dynamic Island.
+    ====================================================== -->
+
+    <div
+      id="mobile-menu"
+      class="mobile-menu"
+      aria-hidden="true"
+    >
+
+      <div class="mobile-menu-inner">
+
+        <nav
+          class="mobile-navigation"
+          aria-label="Mobile navigation"
+        >
+
+          <a href="/" class="mobile-nav-item">
+            <span>Home</span>
+            <ArrowUpRight size={16} />
+          </a>
+
+          <a href="/about" class="mobile-nav-item">
+            <span>About</span>
+            <ArrowUpRight size={16} />
+          </a>
+
+          <a href="/services" class="mobile-nav-item">
+            <span>Services</span>
+            <ArrowUpRight size={16} />
+          </a>
+
+          <a href="/doctors" class="mobile-nav-item">
+            <span>Doctors</span>
+            <ArrowUpRight size={16} />
+          </a>
+
+          <a href="/facilities" class="mobile-nav-item">
+            <span>Facilities</span>
+            <ArrowUpRight size={16} />
+          </a>
+
+          <a href="/gallery" class="mobile-nav-item">
+            <span>Gallery</span>
+            <ArrowUpRight size={16} />
+          </a>
+
+          <a href="/contact" class="mobile-nav-item">
+            <span>Contact</span>
+            <ArrowUpRight size={16} />
+          </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             MOBILE ACTIONS
+        ================================================== -->
+
+        <div class="mobile-actions">
+
+          <a
+            href="tel:+919999999999"
+            class="mobile-call"
+          >
+            <Phone size={17} />
+            <span>Call Hospital</span>
+          </a>
+
+
+          <!-- PREMIUM MOBILE APPOINTMENT BUTTON -->
+
+          <a
+            href="/appointment"
+            class="btn-premium"
+          >
+            <span class="btn-premium-content">
+
+              <span class="btn-premium-label">
+                Healthcare
+              </span>
+
+              <span class="btn-premium-text">
+                Book Appointment
+              </span>
+
+            </span>
+
+            <span class="btn-premium-arrow">
+              <ArrowUpRight
+                size={20}
+                stroke-width={2}
+              />
+            </span>
+
+            <span class="btn-premium-shine"></span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
+<script>
+  /* ========================================================
+     ELEMENTS
+  ======================================================== */
+
+  const shell =
+    document.getElementById("navbar-shell");
+
+  const menuButton =
+    document.getElementById(
+      "mobile-menu-button"
+    );
+
+  const mobileMenu =
+    document.getElementById("mobile-menu");
+
+  const menuIcon =
+    document.getElementById("menu-icon");
+
+  const closeIcon =
+    document.getElementById("close-icon");
+
+
+  /* ========================================================
+     STATE
+  ======================================================== */
+
+  let menuOpen = false;
+
+  let ticking = false;
+
+
+  /*
+   * Amount of scrolling required to completely
+   * transform the navbar into the Dynamic Island.
+   *
+   * 0px   = normal navbar
+   * 180px = Dynamic Island
+   */
+
+  const NAV_MORPH_DISTANCE = 180;
+
+
+  /* ========================================================
+     SET PROGRESS
+  ======================================================== */
+
+  const setNavbarProgress = (
+    progress: number
+  ) => {
+
+    if (!shell) {
+      return;
+    }
+
+    const safeProgress =
+      Math.min(
+        1,
+        Math.max(
+          0,
+          progress
+        )
+      );
+
+    shell.style.setProperty(
+      "--nav-progress",
+      safeProgress.toFixed(4)
+    );
+
+  };
+
+
+  /* ========================================================
+     UPDATE NAVBAR
+  ======================================================== */
+
+  const updateNavbar = () => {
+
+    if (!shell) {
+      ticking = false;
+      return;
+    }
+
+
+    const scrollY =
+      window.scrollY;
+
+
+    /*
+     * ------------------------------------------------------
+     * MOBILE MENU
+     * ------------------------------------------------------
+     */
+
+    if (menuOpen) {
+
+      setNavbarProgress(0);
+
+      ticking = false;
+
+      return;
+    }
+
+
+    /*
+     * ------------------------------------------------------
+     * TOP OF PAGE
+     * ------------------------------------------------------
+     */
+
+    if (scrollY <= 0) {
+
+      setNavbarProgress(0);
+
+      ticking = false;
+
+      return;
+    }
+
+
+    /*
+     * ------------------------------------------------------
+     * CONTINUOUS MORPH
+     * ------------------------------------------------------
+     *
+     * 0    = full navbar
+     * 0.25 = slightly reduced
+     * 0.50 = medium
+     * 0.75 = almost island
+     * 1    = Dynamic Island
+     *
+     * The brand itself NEVER moves.
+     */
+
+    const progress =
+      Math.min(
+        1,
+        scrollY /
+          NAV_MORPH_DISTANCE
+      );
+
+
+    setNavbarProgress(
+      progress
+    );
+
+
+    ticking = false;
+
+  };
+
+
+  /* ========================================================
+     REQUEST ANIMATION FRAME
+  ======================================================== */
+
+  const requestNavbarUpdate =
+    () => {
+
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+
+      window.requestAnimationFrame(
+        updateNavbar
+      );
+
+    };
+
+
+  /* ========================================================
+     SCROLL
+  ======================================================== */
+
+  window.addEventListener(
+    "scroll",
+    requestNavbarUpdate,
+    {
+      passive: true,
+    }
+  );
+
+
+  /* ========================================================
+     INITIAL
+  ======================================================== */
+
+  updateNavbar();
+
+
+  /* ========================================================
+     OPEN MOBILE MENU
+  ======================================================== */
+
+  const openMenu = () => {
+
+    if (
+      !mobileMenu ||
+      !menuButton
+    ) {
+      return;
+    }
+
+
+    menuOpen = true;
+
+
+    /*
+     * Always restore full navbar while
+     * mobile menu is open.
+     */
+
+    setNavbarProgress(0);
+
+
+    mobileMenu.classList.add(
+      "mobile-menu-open"
+    );
+
+    mobileMenu.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    menuButton.setAttribute(
+      "aria-label",
+      "Close navigation menu"
+    );
+
+
+    menuIcon?.classList.add(
+      "menu-icon-hidden"
+    );
+
+    closeIcon?.classList.add(
+      "close-icon-visible"
+    );
+
+  };
+
+
+  /* ========================================================
+     CLOSE MOBILE MENU
+  ======================================================== */
+
+  const closeMenu = () => {
+
+    if (!mobileMenu || !menuButton) {
+      return;
+    }
+
+
+    menuOpen = false;
+
+
+    mobileMenu.classList.remove(
+      "mobile-menu-open"
+    );
+
+    mobileMenu.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menuButton.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+
+
+    menuIcon?.classList.remove(
+      "menu-icon-hidden"
+    );
+
+    closeIcon?.classList.remove(
+      "close-icon-visible"
+    );
+
+
+    /*
+     * Recalculate navbar immediately.
+     */
+
+    updateNavbar();
+
+  };
+
+
+  /* ========================================================
+     MENU BUTTON
+  ======================================================== */
+
+  menuButton?.addEventListener(
+    "click",
+    () => {
+
+      const isOpen =
+        menuButton.getAttribute(
+          "aria-expanded"
+        ) === "true";
+
+
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+
+    }
+  );
+
+
+  /* ========================================================
+     CLOSE AFTER NAVIGATION
+  ======================================================== */
+
+  mobileMenu
+    ?.querySelectorAll("a")
+    .forEach((link) => {
+
+      link.addEventListener(
+        "click",
+        () => {
+          closeMenu();
+        }
+      );
+
+    });
+
+
+  /* ========================================================
+     ESCAPE
+  ======================================================== */
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (
+        event.key === "Escape" &&
+        menuOpen
+      ) {
+        closeMenu();
+      }
+
+    }
+  );
+
+
+  /* ========================================================
+     CLICK OUTSIDE
+  ======================================================== */
+
+  document.addEventListener(
+    "pointerdown",
+    (event) => {
+
+      if (
+        !menuOpen ||
+        !shell
+      ) {
+        return;
+      }
+
+
+      const target =
+        event.target;
+
+
+      if (
+        target instanceof Node &&
+        !shell.contains(target)
+      ) {
+        closeMenu();
+      }
+
+    }
+  );
+
+
+  /* ========================================================
+     BREAKPOINT
+  ======================================================== */
+
+  const mediaQuery =
+    window.matchMedia(
+      "(min-width: 1280px)"
+    );
+
+
+  const handleBreakpoint =
+    () => {
+
+      if (
+        mediaQuery.matches &&
+        menuOpen
+      ) {
+        closeMenu();
+      }
+
+      requestNavbarUpdate();
+
+    };
+
+
+  mediaQuery.addEventListener(
+    "change",
+    handleBreakpoint
+  );
+
+
+  /* ========================================================
+     RESIZE
+  ======================================================== */
+
+  window.addEventListener(
+    "resize",
+    requestNavbarUpdate,
+    {
+      passive: true,
+    }
+  );
+</script>

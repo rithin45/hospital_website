@@ -1,0 +1,967 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import {
+  Activity,
+  HeartPulse,
+  Stethoscope,
+  Microscope,
+  Pill,
+  Ambulance,
+  Baby,
+  Bone,
+  Eye,
+} from "lucide-react";
+---
+
+<Layout
+  title="Medical Services | Health Vision Hospital"
+  description="Explore the healthcare services available at Health Vision Hospital."
+>
+  <Navbar />
+
+  <main class="services-page-wrapper">
+    <!-- Ambient Background Light Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+    <section class="services-page-header">
+      <div class="container-main">
+        <div class="services-page-header-content glass-card-premium">
+          <div class="card-top-reflection"></div>
+          <div class="card-shine-sweep"></div>
+
+          <div class="card-relative-content">
+            <p class="services-eyebrow">
+              Our Services
+            </p>
+
+            <h1 class="services-page-title">
+              Healthcare services designed around your needs
+            </h1>
+
+            <p class="services-page-description">
+              From routine consultations to specialized medical care, our
+              services are focused on providing dependable and compassionate
+              healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+    <section class="services-section">
+      <div class="container-main">
+        <div class="services-grid">
+
+          <!-- General Medicine -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Stethoscope size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                General Medicine
+              </h2>
+
+              <p class="service-description">
+                Medical consultation, diagnosis and treatment for common
+                illnesses and general health concerns.
+              </p>
+            </div>
+          </article>
+
+          <!-- Cardiology -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <HeartPulse size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Cardiology
+              </h2>
+
+              <p class="service-description">
+                Evaluation and management of cardiovascular health and
+                related medical conditions.
+              </p>
+            </div>
+          </article>
+
+          <!-- Diagnostics -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Microscope size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Diagnostics
+              </h2>
+
+              <p class="service-description">
+                Diagnostic services supporting healthcare professionals
+                with medical evaluation and treatment decisions.
+              </p>
+            </div>
+          </article>
+
+          <!-- Pharmacy -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Pill size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Pharmacy
+              </h2>
+
+              <p class="service-description">
+                Convenient access to prescribed medicines and
+                pharmaceutical support.
+              </p>
+            </div>
+          </article>
+
+          <!-- Emergency Care -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Ambulance size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Emergency Care
+              </h2>
+
+              <p class="service-description">
+                Prompt medical attention for urgent healthcare requirements.
+              </p>
+            </div>
+          </article>
+
+          <!-- Women's Health -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Activity size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Women's Health
+              </h2>
+
+              <p class="service-description">
+                Healthcare services supporting women's health and wellbeing.
+              </p>
+            </div>
+          </article>
+
+          <!-- Pediatrics -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Baby size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Pediatrics
+              </h2>
+
+              <p class="service-description">
+                Healthcare support focused on children's medical needs.
+              </p>
+            </div>
+          </article>
+
+          <!-- Orthopedics -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Bone size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Orthopedics
+              </h2>
+
+              <p class="service-description">
+                Assessment and treatment of conditions involving bones,
+                joints and the musculoskeletal system.
+              </p>
+            </div>
+          </article>
+
+          <!-- Eye Care -->
+          <article class="service-card glass-card-premium">
+            <div class="card-top-reflection"></div>
+            <div class="card-shine-sweep"></div>
+
+            <div class="card-relative-content">
+              <div class="service-icon">
+                <Eye size={25} strokeWidth={1.8} />
+              </div>
+
+              <h2 class="service-title">
+                Eye Care
+              </h2>
+
+              <p class="service-description">
+                Eye examinations and healthcare services for maintaining
+                good vision and eye health.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+    <section class="services-cta">
+      <div class="container-main">
+        <div class="services-cta-inner glass-card-cta">
+          <div class="card-top-reflection"></div>
+          <div class="card-shine-sweep"></div>
+
+          <div class="card-relative-content">
+            <h2 class="services-cta-title">
+              Need medical assistance?
+            </h2>
+
+            <p class="services-cta-description">
+              Contact our team or request an appointment with the appropriate
+              department.
+            </p>
+
+            <div class="services-cta-actions">
+              <!-- PREMIUM BUTTON PRIMARY -->
+              <a href="/appointment" class="btn-premium">
+                <div class="btn-premium-shine"></div>
+                <div class="btn-premium-content">
+                  <span class="btn-premium-label">Quick Booking</span>
+                  <span class="btn-premium-text">Book Appointment</span>
+                </div>
+                <div class="btn-premium-arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- PREMIUM BUTTON SECONDARY -->
+              <a href="/contact" class="btn-premium btn-premium-alt">
+                <div class="btn-premium-shine"></div>
+                <div class="btn-premium-content">
+                  <span class="btn-premium-label">Get In Touch</span>
+                  <span class="btn-premium-text">Contact Us</span>
+                </div>
+                <div class="btn-premium-arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* =========================================================
+     PAGE WRAPPER & BACKGROUND ATMOSPHERE
+     ========================================================= */
+
+  .services-page-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #edf5fd;
+  }
+
+  /* Ambient Glow Orbs */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .orb-1 {
+    width: 550px;
+    height: 550px;
+    top: -100px;
+    left: -120px;
+    background: radial-gradient(circle, rgba(60, 195, 252, 0.3) 0%, rgba(11, 120, 199, 0.1) 70%, transparent 100%);
+  }
+
+  .orb-2 {
+    width: 650px;
+    height: 650px;
+    top: 35%;
+    right: -150px;
+    background: radial-gradient(circle, rgba(3, 84, 165, 0.22) 0%, rgba(60, 195, 252, 0.12) 70%, transparent 100%);
+  }
+
+  .orb-3 {
+    width: 700px;
+    height: 700px;
+    bottom: -150px;
+    left: 15%;
+    background: radial-gradient(circle, rgba(60, 195, 252, 0.25) 0%, rgba(3, 84, 165, 0.15) 70%, transparent 100%);
+  }
+
+  section {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-relative-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* =========================================================
+     GLOBAL PREMIUM GLASS CARDS (Matching Premium Aesthetics)
+     ========================================================= */
+
+  .glass-card-premium {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.58);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 32px;
+
+    box-shadow:
+      0 22px 50px rgba(15, 118, 110, 0.08),
+      0 7px 18px rgba(15, 118, 110, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+
+    transition:
+      transform .5s cubic-bezier(.22, 1, .36, 1),
+      box-shadow .5s ease,
+      background .5s ease,
+      border-color .5s ease;
+  }
+
+  .glass-card-premium:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+      0 30px 62px rgba(15, 118, 110, 0.14),
+      0 10px 22px rgba(15, 118, 110, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+  }
+
+  /* Premium Card Specular Top Reflection */
+  .card-top-reflection {
+    position: absolute;
+    top: 1px;
+    left: 24px;
+    right: 24px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.85);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Premium Card Shine Sweep */
+  .card-shine-sweep {
+    position: absolute;
+    top: -100%;
+    left: -45%;
+    width: 35%;
+    height: 300%;
+    transform: rotate(22deg);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+    pointer-events: none;
+    z-index: 2;
+    transition: left .8s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .glass-card-premium:hover .card-shine-sweep {
+    left: 125%;
+  }
+
+  /* =========================================================
+     SERVICES PAGE HEADER
+     ========================================================= */
+
+  .services-page-header {
+    width: 100%;
+    padding-top: 156px;
+    padding-bottom: 90px;
+  }
+
+  .services-page-header-content {
+    max-width: 820px;
+    min-width: 0;
+    padding: 50px;
+  }
+
+  .services-eyebrow {
+    margin: 0;
+    color: #0354a5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .services-page-title {
+    max-width: 820px;
+    margin: 18px 0 0;
+    color: #061a31;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+  }
+
+  .services-page-description {
+    max-width: 680px;
+    margin: 24px 0 0;
+    color: #60758b;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  /* =========================================================
+     SERVICES SECTION & CARDS
+     ========================================================= */
+
+  .services-section {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 100px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    min-width: 0;
+    padding: 36px 30px;
+    border-radius: 28px;
+  }
+
+  /* =========================================================
+     SERVICE ICON
+     ========================================================= */
+
+  .service-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 17px;
+    color: #0354A5;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(240, 253, 250, 0.88)
+    );
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+    transition:
+      transform .5s cubic-bezier(.22, 1, .36, 1),
+      box-shadow .5s ease;
+  }
+
+  .service-card:hover .service-icon {
+    transform: rotate(3deg) scale(1.04);
+    box-shadow:
+      0 12px 26px rgba(0, 0, 0, 0.11),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  /* =========================================================
+     SERVICE CONTENT
+     ========================================================= */
+
+  .service-title {
+    margin: 24px 0 0;
+    color: #102a43;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+
+  .service-description {
+    max-width: 500px;
+    margin: 12px 0 0;
+    color: #60758b;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* =========================================================
+     CTA SECTION
+     ========================================================= */
+
+  .services-cta {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 110px;
+  }
+
+  .glass-card-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 40px;
+    border-radius: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: linear-gradient(
+      135deg,
+      rgba(3, 84, 165, 0.92) 0%,
+      rgba(11, 120, 199, 0.88) 52%,
+      rgba(60, 195, 252, 0.92) 100%
+    );
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+
+    box-shadow:
+      0 30px 65px rgba(15, 118, 110, 0.28),
+      0 10px 25px rgba(15, 118, 110, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .services-cta-inner {
+    max-width: 800px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .services-cta-title {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 650;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+  }
+
+  .services-cta-description {
+    max-width: 580px;
+    margin: 18px auto 0;
+    color: rgba(221, 245, 255, 0.92);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .services-cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  /* =========================================================
+     GLOBAL PREMIUM BUTTON STYLING (.btn-premium)
+     ========================================================= */
+
+  .btn-premium {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+
+    min-height: 68px;
+    padding: 8px 8px 8px 21px;
+
+    overflow: hidden;
+
+    color: #fff;
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 22px;
+
+    background: linear-gradient(
+      135deg,
+      #0354A5 0%,
+      #0B78C7 52%,
+      #3CC3FC 100%
+    );
+
+    box-shadow:
+      0 22px 50px rgba(15, 118, 110, 0.22),
+      0 7px 18px rgba(15, 118, 110, 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 0.30),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+
+    transition:
+      transform .5s cubic-bezier(.22, 1, .36, 1),
+      box-shadow .5s ease;
+  }
+
+  .btn-premium::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.42);
+    pointer-events: none;
+  }
+
+  .btn-premium:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+      0 30px 62px rgba(15, 118, 110, 0.27),
+      0 10px 22px rgba(15, 118, 110, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.38),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  /* SECONDARY BUTTON GLASS VARIANT */
+  .btn-premium-alt {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .btn-premium-alt:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.28) 0%,
+      rgba(255, 255, 255, 0.14) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* BUTTON CONTENT */
+  .btn-premium-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .btn-premium-label {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .btn-premium-text {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    white-space: nowrap;
+  }
+
+  /* BUTTON ARROW */
+  .btn-premium-arrow {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 52px;
+    height: 52px;
+
+    color: #0354A5;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 17px;
+
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(240, 253, 250, 0.88)
+    );
+
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+
+    transition:
+      transform .5s cubic-bezier(.22, 1, .36, 1),
+      box-shadow .5s ease;
+  }
+
+  .btn-premium:hover .btn-premium-arrow {
+    transform: rotate(3deg) scale(1.04);
+
+    box-shadow:
+      0 12px 26px rgba(0, 0, 0, 0.11),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  /* BUTTON SHINE */
+  .btn-premium-shine {
+    position: absolute;
+    top: -100%;
+    left: -45%;
+    width: 35%;
+    height: 300%;
+    transform: rotate(22deg);
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.22),
+      transparent
+    );
+
+    pointer-events: none;
+    transition: left .8s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .btn-premium:hover .btn-premium-shine {
+    left: 125%;
+  }
+
+  /* =========================================================
+     RESPONSIVE BREAKPOINTS
+     ========================================================= */
+
+  @media (min-width: 1440px) {
+    .services-page-header {
+      padding-top: 166px;
+      padding-bottom: 105px;
+    }
+
+    .services-section {
+      padding-bottom: 115px;
+    }
+
+    .services-grid {
+      gap: 28px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .services-page-header {
+      padding-top: 138px;
+      padding-bottom: 75px;
+    }
+
+    .services-section {
+      padding-bottom: 80px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 30px 24px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-page-header {
+      padding-top: 122px;
+      padding-bottom: 64px;
+    }
+
+    .services-page-header-content,
+    .glass-card-cta {
+      padding: 32px 20px;
+      border-radius: 24px;
+    }
+
+    .services-page-title {
+      margin-top: 14px;
+      font-size: clamp(36px, 10vw, 48px);
+    }
+
+    .services-page-description {
+      margin-top: 18px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .services-section {
+      padding-bottom: 70px;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .service-card {
+      padding: 26px 20px;
+      border-radius: 22px;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+    }
+
+    .service-title {
+      margin-top: 20px;
+      font-size: 19px;
+    }
+
+    .service-description {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .services-cta-title {
+      font-size: 34px;
+    }
+
+    .services-cta-description {
+      font-size: 15px;
+    }
+
+    .services-cta-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn-premium {
+      width: 100%;
+      min-height: 64px;
+      padding: 7px 7px 7px 17px;
+      border-radius: 20px;
+    }
+
+    .btn-premium-arrow {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+    }
+
+    .btn-premium-text {
+      font-size: 11px;
+    }
+
+    .btn-premium-label {
+      font-size: 7px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .services-page-header {
+      padding-top: 116px;
+      padding-bottom: 58px;
+    }
+
+    .services-page-title {
+      font-size: 34px;
+    }
+
+    .service-card {
+      padding: 22px 18px;
+    }
+
+    .services-cta-title {
+      font-size: 30px;
+    }
+
+    .btn-premium {
+      gap: 12px;
+      padding-left: 15px;
+    }
+
+    .btn-premium-arrow {
+      width: 47px;
+      height: 47px;
+    }
+  }
+
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+
+  @media (prefers-reduced-motion: reduce) {
+    .glass-card-premium,
+    .card-shine-sweep,
+    .service-icon,
+    .btn-premium,
+    .btn-premium-arrow,
+    .btn-premium-shine {
+      transition: none;
+    }
+  }
+</style>

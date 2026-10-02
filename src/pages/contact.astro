@@ -1,0 +1,2793 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock3,
+  Navigation,
+  ArrowRight,
+  MessageCircle,
+  CalendarDays,
+} from "lucide-react";
+---
+
+<Layout
+  title="Contact Us | Health Vision Hospital"
+  description="Contact Health Vision Hospital for appointments, enquiries and healthcare assistance."
+>
+  <Navbar />
+
+  <main class="contact-page">
+
+    <!-- =====================================================
+         AMBIENT BACKGROUND
+    ====================================================== -->
+
+    <div class="contact-orb contact-orb-one"></div>
+    <div class="contact-orb contact-orb-two"></div>
+    <div class="contact-orb contact-orb-three"></div>
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="contact-page-header">
+
+      <div class="container-main">
+
+        <div class="contact-header-card glass-card">
+
+          <div class="glass-top-line"></div>
+          <div class="glass-shine"></div>
+
+          <div class="contact-header-content">
+
+            <div class="contact-header-icon">
+
+              <MessageCircle
+                size={22}
+                strokeWidth={1.8}
+              />
+
+            </div>
+
+            <div class="contact-header-copy">
+
+              <p class="contact-eyebrow">
+                Contact Us
+              </p>
+
+              <h1 class="contact-page-title">
+                We're here to help
+              </h1>
+
+              <p class="contact-page-description">
+                Get in touch with Health Vision Hospital for appointments,
+                enquiries and general information.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT INFORMATION
+    ====================================================== -->
+
+    <section class="contact-information">
+
+      <div class="container-main">
+
+        <div class="contact-section-heading">
+
+          <div>
+
+            <p class="contact-section-eyebrow">
+              Reach Us
+            </p>
+
+            <h2 class="contact-section-title">
+              Everything you need to connect
+            </h2>
+
+          </div>
+
+          <p class="contact-section-description">
+            Whether you need directions, an appointment or general
+            information, our team is ready to assist you.
+          </p>
+
+        </div>
+
+
+        <div class="contact-information-grid">
+
+
+          <!-- =================================================
+               ADDRESS
+          ================================================== -->
+
+          <article class="contact-info-card">
+
+            <div class="contact-card-top">
+
+              <div class="contact-info-icon">
+
+                <MapPin
+                  size={21}
+                  strokeWidth={1.8}
+                />
+
+              </div>
+
+              <span class="contact-card-number">
+                01
+              </span>
+
+            </div>
+
+            <h2 class="contact-info-title">
+              Address
+            </h2>
+
+            <p class="contact-info-text">
+              Hospital Address<br />
+              Kerala, India
+            </p>
+
+            <a
+              href="#map"
+              class="contact-card-link"
+            >
+              View location
+              <ArrowRight
+                size={15}
+                strokeWidth={2}
+              />
+            </a>
+
+          </article>
+
+
+          <!-- =================================================
+               PHONE
+          ================================================== -->
+
+          <article class="contact-info-card">
+
+            <div class="contact-card-top">
+
+              <div class="contact-info-icon">
+
+                <Phone
+                  size={21}
+                  strokeWidth={1.8}
+                />
+
+              </div>
+
+              <span class="contact-card-number">
+                02
+              </span>
+
+            </div>
+
+            <h2 class="contact-info-title">
+              Phone
+            </h2>
+
+            <a
+              href="tel:+919999999999"
+              class="contact-info-link"
+            >
+              +91 99999 99999
+            </a>
+
+            <a
+              href="tel:+919999999999"
+              class="contact-card-link"
+            >
+              Call the hospital
+              <ArrowRight
+                size={15}
+                strokeWidth={2}
+              />
+            </a>
+
+          </article>
+
+
+          <!-- =================================================
+               EMAIL
+          ================================================== -->
+
+          <article class="contact-info-card">
+
+            <div class="contact-card-top">
+
+              <div class="contact-info-icon">
+
+                <Mail
+                  size={21}
+                  strokeWidth={1.8}
+                />
+
+              </div>
+
+              <span class="contact-card-number">
+                03
+              </span>
+
+            </div>
+
+            <h2 class="contact-info-title">
+              Email
+            </h2>
+
+            <a
+              href="mailto:info@healthvisionhospital.org"
+              class="contact-info-link contact-email"
+            >
+              info@healthvisionhospital.org
+            </a>
+
+            <a
+              href="mailto:info@healthvisionhospital.org"
+              class="contact-card-link"
+            >
+              Send an email
+              <ArrowRight
+                size={15}
+                strokeWidth={2}
+              />
+            </a>
+
+          </article>
+
+
+          <!-- =================================================
+               HOURS
+          ================================================== -->
+
+          <article class="contact-info-card">
+
+            <div class="contact-card-top">
+
+              <div class="contact-info-icon">
+
+                <Clock3
+                  size={21}
+                  strokeWidth={1.8}
+                />
+
+              </div>
+
+              <span class="contact-card-number">
+                04
+              </span>
+
+            </div>
+
+            <h2 class="contact-info-title">
+              Opening Hours
+            </h2>
+
+            <p class="contact-info-text">
+              Monday – Saturday<br />
+              9:00 AM – 6:00 PM
+            </p>
+
+            <span class="contact-status">
+              <span class="contact-status-dot"></span>
+              Currently available
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAP + CONTACT CTA
+    ====================================================== -->
+
+    <section class="contact-main-section">
+
+      <div class="container-main">
+
+        <div class="contact-main-grid">
+
+
+          <!-- =================================================
+               MAP
+          ================================================== -->
+
+          <div
+            class="contact-map-card"
+            id="map"
+          >
+
+            <div class="contact-map-placeholder">
+
+              <div class="map-grid"></div>
+
+              <div class="map-orb map-orb-one"></div>
+              <div class="map-orb map-orb-two"></div>
+
+              <div class="contact-map-content">
+
+                <div class="contact-map-icon">
+
+                  <MapPin
+                    size={34}
+                    strokeWidth={1.6}
+                  />
+
+                </div>
+
+                <p class="contact-map-label">
+                  OUR LOCATION
+                </p>
+
+                <p class="contact-map-title">
+                  Health Vision Hospital
+                </p>
+
+                <p class="contact-map-description">
+                  Replace this area with the hospital's Google Maps embed
+                  when the exact hospital location is available.
+                </p>
+
+              </div>
+
+
+              <div class="map-pin-shadow"></div>
+
+              <div class="map-center-pin">
+
+                <MapPin
+                  size={23}
+                  strokeWidth={2}
+                />
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-map-footer">
+
+              <div class="map-footer-info">
+
+                <span class="map-footer-label">
+                  FIND US
+                </span>
+
+                <span class="map-footer-text">
+                  Kerala, India
+                </span>
+
+              </div>
+
+              <a
+                href="#"
+                class="directions-button"
+              >
+
+                <Navigation
+                  size={16}
+                  strokeWidth={2}
+                />
+
+                <span>
+                  Get Directions
+                </span>
+
+                <ArrowRight
+                  size={15}
+                  strokeWidth={2}
+                />
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================================
+               CONTACT HELP
+          ================================================== -->
+
+          <div class="contact-help-card">
+
+            <div class="contact-help-glow contact-help-glow-one"></div>
+            <div class="contact-help-glow contact-help-glow-two"></div>
+
+            <div class="contact-help-line"></div>
+
+            <div class="contact-help-content">
+
+              <div class="contact-help-icon">
+
+                <MessageCircle
+                  size={21}
+                  strokeWidth={1.8}
+                />
+
+              </div>
+
+              <p class="contact-help-eyebrow">
+                Get in Touch
+              </p>
+
+              <h2 class="contact-help-title">
+                Have a question?
+              </h2>
+
+              <p class="contact-help-description">
+                Our team is available to help with appointments, hospital
+                information and general enquiries.
+              </p>
+
+
+              <!-- =================================================
+                   CALL / EMAIL
+              ================================================== -->
+
+              <div class="contact-help-actions">
+
+
+                <a
+                  href="tel:+919999999999"
+                  class="contact-help-action"
+                >
+
+                  <span class="contact-help-action-icon">
+
+                    <Phone
+                      size={18}
+                      strokeWidth={1.8}
+                    />
+
+                  </span>
+
+                  <span class="contact-help-action-content">
+
+                    <span class="contact-help-action-label">
+                      CONTACT
+                    </span>
+
+                    <span class="contact-help-action-title">
+                      Call the Hospital
+                    </span>
+
+                  </span>
+
+                  <ArrowRight
+                    class="contact-help-action-arrow"
+                    size={17}
+                    strokeWidth={2}
+                  />
+
+                </a>
+
+
+                <a
+                  href="mailto:info@healthvisionhospital.org"
+                  class="contact-help-action"
+                >
+
+                  <span class="contact-help-action-icon">
+
+                    <Mail
+                      size={18}
+                      strokeWidth={1.8}
+                    />
+
+                  </span>
+
+                  <span class="contact-help-action-content">
+
+                    <span class="contact-help-action-label">
+                      EMAIL
+                    </span>
+
+                    <span class="contact-help-action-title">
+                      Email Us
+                    </span>
+
+                  </span>
+
+                  <ArrowRight
+                    class="contact-help-action-arrow"
+                    size={17}
+                    strokeWidth={2}
+                  />
+
+                </a>
+
+              </div>
+
+
+              <!-- =================================================
+                   APPOINTMENT BUTTON
+              ================================================== -->
+
+              <a
+                href="/appointment"
+                class="premium-button"
+              >
+
+                <span class="premium-button-shine"></span>
+
+                <span class="premium-button-content">
+
+                  <span class="premium-button-label">
+                    START YOUR VISIT
+                  </span>
+
+                  <span class="premium-button-text">
+                    Request an Appointment
+                  </span>
+
+                </span>
+
+                <span class="premium-button-arrow">
+
+                  <ArrowRight
+                    size={19}
+                    strokeWidth={2.4}
+                  />
+
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+</Layout>
+
+
+<style>
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.contact-page {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    #edf5fd;
+}
+
+
+/* =========================================================
+   AMBIENT ORBS
+========================================================= */
+
+.contact-orb {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+.contact-orb-one {
+
+  width: 560px;
+  height: 560px;
+
+  top: -180px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, .25),
+      rgba(11, 120, 199, .08) 70%,
+      transparent
+    );
+}
+
+
+.contact-orb-two {
+
+  width: 620px;
+  height: 620px;
+
+  top: 38%;
+  right: -250px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(3, 84, 165, .18),
+      rgba(60, 195, 252, .07) 70%,
+      transparent
+    );
+}
+
+
+.contact-orb-three {
+
+  width: 650px;
+  height: 650px;
+
+  bottom: -300px;
+  left: 10%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, .16),
+      transparent 70%
+    );
+}
+
+
+section {
+
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+
+.glass-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, .76);
+
+  border-radius: 32px;
+
+  background:
+    rgba(255, 255, 255, .58);
+
+  backdrop-filter:
+    blur(25px) saturate(180%);
+
+  -webkit-backdrop-filter:
+    blur(25px) saturate(180%);
+
+  box-shadow:
+    0 25px 60px rgba(3, 84, 165, .08),
+    0 8px 20px rgba(3, 84, 165, .035),
+    inset 0 1px 0 rgba(255, 255, 255, .90);
+
+  transition:
+    transform .5s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .5s ease;
+}
+
+
+.glass-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 32px 70px rgba(3, 84, 165, .12),
+    inset 0 1px 0 rgba(255, 255, 255, .98);
+}
+
+
+.glass-top-line {
+
+  position: absolute;
+
+  top: 1px;
+
+  left: 25px;
+  right: 25px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, .92);
+
+  z-index: 5;
+}
+
+
+.glass-shine {
+
+  position: absolute;
+
+  top: -100%;
+  left: -45%;
+
+  width: 34%;
+  height: 300%;
+
+  transform:
+    rotate(22deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, .30),
+      transparent
+    );
+
+  pointer-events: none;
+
+  z-index: 4;
+
+  transition:
+    left .85s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.glass-card:hover .glass-shine {
+
+  left: 125%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contact-page-header {
+
+  width: 100%;
+
+  padding-top: 156px;
+
+  padding-bottom: 90px;
+}
+
+
+.contact-header-card {
+
+  max-width: 900px;
+
+  padding:
+    48px;
+}
+
+
+.contact-header-content {
+
+  position: relative;
+
+  z-index: 6;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 24px;
+}
+
+
+.contact-header-icon {
+
+  flex:
+    0 0 56px;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0354a5;
+
+  border:
+    1px solid rgba(255, 255, 255, .90);
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #e9f8ff
+    );
+
+  box-shadow:
+    0 10px 25px rgba(3, 84, 165, .08),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+
+.contact-header-copy {
+
+  min-width: 0;
+}
+
+
+.contact-eyebrow {
+
+  margin: 0;
+
+  color: #0354a5;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+.contact-page-title {
+
+  max-width: 800px;
+
+  margin:
+    14px 0 0;
+
+  color: #061a31;
+
+  font-size:
+    clamp(42px, 5vw, 68px);
+
+  font-weight: 600;
+
+  line-height: 1.04;
+
+  letter-spacing: -.045em;
+}
+
+
+.contact-page-description {
+
+  max-width: 680px;
+
+  margin:
+    22px 0 0;
+
+  color: #60758b;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.contact-section-heading {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 42px;
+}
+
+
+.contact-section-eyebrow {
+
+  margin: 0;
+
+  color: #0354a5;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .15em;
+
+  text-transform: uppercase;
+}
+
+
+.contact-section-title {
+
+  max-width: 650px;
+
+  margin:
+    9px 0 0;
+
+  color: #102a43;
+
+  font-size:
+    clamp(30px, 3vw, 43px);
+
+  font-weight: 650;
+
+  line-height: 1.12;
+
+  letter-spacing: -.035em;
+}
+
+
+.contact-section-description {
+
+  max-width: 420px;
+
+  margin: 0;
+
+  color: #60758b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contact-information {
+
+  width: 100%;
+
+  padding:
+    20px 0 110px;
+}
+
+
+.contact-information-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-info-card {
+
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  padding: 26px;
+
+  border:
+    1px solid rgba(255, 255, 255, .78);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, .82),
+      rgba(245, 251, 255, .68)
+    );
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    0 16px 40px rgba(3, 84, 165, .055),
+    inset 0 1px 0 rgba(255, 255, 255, .95);
+
+  transition:
+    transform .45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .45s ease,
+    border-color .45s ease;
+}
+
+
+.contact-info-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -100px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, .13),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+.contact-info-card:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(11, 120, 199, .20);
+
+  box-shadow:
+    0 25px 50px rgba(3, 84, 165, .10),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+
+.contact-card-top {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.contact-info-icon {
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0757a6;
+
+  border:
+    1px solid rgba(255, 255, 255, .90);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #e7f7ff
+    );
+
+  box-shadow:
+    0 9px 22px rgba(3, 84, 165, .07),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+
+.contact-card-number {
+
+  color:
+    rgba(3, 84, 165, .28);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .10em;
+}
+
+
+.contact-info-title {
+
+  position: relative;
+
+  z-index: 2;
+
+  margin:
+    20px 0 0;
+
+  color: #102a43;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+.contact-info-text {
+
+  position: relative;
+
+  z-index: 2;
+
+  margin:
+    10px 0 0;
+
+  color: #60758b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+.contact-info-link {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  margin-top: 10px;
+
+  color: #60758b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  text-decoration: none;
+
+  transition:
+    color .2s ease;
+}
+
+
+.contact-info-link:hover {
+
+  color: #0757a6;
+}
+
+
+.contact-email {
+
+  overflow-wrap: anywhere;
+}
+
+
+.contact-card-link {
+
+  position: relative;
+
+  z-index: 3;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 20px;
+
+  color: #0757a6;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  text-decoration: none;
+
+  transition:
+    gap .35s cubic-bezier(.22, 1, .36, 1),
+    color .2s ease;
+}
+
+
+.contact-card-link:hover {
+
+  gap: 10px;
+
+  color: #034681;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.contact-status {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 19px;
+
+  padding:
+    7px 10px;
+
+  border:
+    1px solid rgba(44, 168, 113, .15);
+
+  border-radius: 999px;
+
+  color: #287a5a;
+
+  background:
+    rgba(235, 251, 243, .80);
+
+  font-size: 9px;
+
+  font-weight: 750;
+
+  letter-spacing: .03em;
+}
+
+
+.contact-status-dot {
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #32a36e;
+
+  box-shadow:
+    0 0 0 4px rgba(50, 163, 110, .10);
+}
+
+
+/* =========================================================
+   MAIN CONTACT SECTION
+========================================================= */
+
+.contact-main-section {
+
+  width: 100%;
+
+  padding:
+    20px 0 110px;
+}
+
+
+.contact-main-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(0, .85fr);
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   MAP CARD
+========================================================= */
+
+.contact-map-card {
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, .78);
+
+  border-radius: 28px;
+
+  background:
+    rgba(255, 255, 255, .72);
+
+  box-shadow:
+    0 20px 50px rgba(3, 84, 165, .07),
+    inset 0 1px 0 rgba(255, 255, 255, .96);
+}
+
+
+.contact-map-placeholder {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 440px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4ff,
+      #f1faff 48%,
+      #d9edf9
+    );
+}
+
+
+/* =========================================================
+   MAP GRID
+========================================================= */
+
+.map-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .45;
+
+  background-image:
+    linear-gradient(
+      rgba(3, 84, 165, .07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(3, 84, 165, .07) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    48px 48px;
+
+  transform:
+    rotate(-5deg)
+    scale(1.15);
+}
+
+
+/* =========================================================
+   MAP ORBS
+========================================================= */
+
+.map-orb {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.map-orb-one {
+
+  width: 430px;
+  height: 430px;
+
+  top: -220px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, .18),
+      transparent 70%
+    );
+}
+
+
+.map-orb-two {
+
+  width: 420px;
+  height: 420px;
+
+  right: -180px;
+  bottom: -220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(7, 87, 166, .14),
+      transparent 70%
+    );
+}
+
+
+/* =========================================================
+   MAP CONTENT
+========================================================= */
+
+.contact-map-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(330px, calc(100% - 40px));
+
+  padding:
+    31px 27px;
+
+  text-align: center;
+
+  border:
+    1px solid rgba(255, 255, 255, .82);
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, .64);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    0 20px 45px rgba(3, 84, 165, .09),
+    inset 0 1px 0 rgba(255, 255, 255, .96);
+}
+
+
+.contact-map-icon {
+
+  width: 58px;
+  height: 58px;
+
+  margin-inline: auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0757a6;
+
+  border:
+    1px solid rgba(255, 255, 255, .90);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #e8f8ff
+    );
+
+  box-shadow:
+    0 10px 25px rgba(3, 84, 165, .08);
+}
+
+
+.contact-map-label {
+
+  margin:
+    17px 0 0;
+
+  color: #0757a6;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: .15em;
+}
+
+
+.contact-map-title {
+
+  margin:
+    8px 0 0;
+
+  color: #102a43;
+
+  font-size: 18px;
+
+  font-weight: 750;
+}
+
+
+.contact-map-description {
+
+  margin:
+    9px 0 0;
+
+  color: #60758b;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAP CENTER PIN
+========================================================= */
+
+.map-center-pin {
+
+  position: absolute;
+
+  z-index: 3;
+
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  border:
+    2px solid rgba(255, 255, 255, .80);
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0757a6,
+      #0b82cf
+    );
+
+  box-shadow:
+    0 13px 30px rgba(3, 84, 165, .25),
+    0 0 0 9px rgba(7, 87, 166, .08);
+}
+
+
+.map-pin-shadow {
+
+  position: absolute;
+
+  z-index: 2;
+
+  width: 18px;
+  height: 8px;
+
+  bottom:
+    calc(50% - 68px);
+
+  border-radius: 50%;
+
+  background:
+    rgba(3, 70, 129, .18);
+
+  filter: blur(4px);
+}
+
+
+/* =========================================================
+   MAP FOOTER
+========================================================= */
+
+.contact-map-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    18px 22px;
+
+  border-top:
+    1px solid rgba(220, 235, 245, .80);
+
+  background:
+    rgba(255, 255, 255, .88);
+}
+
+
+.map-footer-info {
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.map-footer-label {
+
+  color:
+    rgba(3, 84, 165, .52);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: .13em;
+}
+
+
+.map-footer-text {
+
+  color: #102a43;
+
+  font-size: 12px;
+
+  font-weight: 650;
+}
+
+
+.directions-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  min-height: 42px;
+
+  padding:
+    0 13px;
+
+  color: #0757a6;
+
+  border:
+    1px solid rgba(7, 87, 166, .13);
+
+  border-radius: 12px;
+
+  background:
+    #edf8ff;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  text-decoration: none;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    gap .3s ease;
+}
+
+
+.directions-button:hover {
+
+  transform:
+    translateY(-2px);
+
+  gap: 9px;
+
+  background:
+    #e2f4ff;
+}
+
+
+/* =========================================================
+   HELP CARD
+========================================================= */
+
+.contact-help-card {
+
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, .32);
+
+  border-radius: 28px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #034681 0%,
+      #0757a6 44%,
+      #0b78c7 76%,
+      #3cc3fc 100%
+    );
+
+  box-shadow:
+    0 25px 60px rgba(3, 70, 129, .18),
+    inset 0 1px 0 rgba(255, 255, 255, .35);
+}
+
+
+.contact-help-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  padding:
+    42px;
+}
+
+
+.contact-help-line {
+
+  position: absolute;
+
+  top: 1px;
+
+  left: 30px;
+  right: 30px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, .42);
+
+  z-index: 6;
+}
+
+
+/* =========================================================
+   HELP GLOWS
+========================================================= */
+
+.contact-help-glow {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(10px);
+}
+
+
+.contact-help-glow-one {
+
+  width: 450px;
+  height: 450px;
+
+  top: -270px;
+  right: -130px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, .18),
+      transparent 70%
+    );
+}
+
+
+.contact-help-glow-two {
+
+  width: 350px;
+  height: 350px;
+
+  bottom: -220px;
+  left: -140px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(60, 195, 252, .20),
+      transparent 70%
+    );
+}
+
+
+/* =========================================================
+   HELP ICON
+========================================================= */
+
+.contact-help-icon {
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0757a6;
+
+  border:
+    1px solid rgba(255, 255, 255, .75);
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, .94);
+
+  box-shadow:
+    0 10px 25px rgba(0, 25, 70, .12);
+}
+
+
+.contact-help-eyebrow {
+
+  margin:
+    22px 0 0;
+
+  color:
+    rgba(221, 245, 255, .85);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .15em;
+
+  text-transform: uppercase;
+}
+
+
+.contact-help-title {
+
+  margin:
+    10px 0 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(31px, 3vw, 44px);
+
+  font-weight: 650;
+
+  line-height: 1.08;
+
+  letter-spacing: -.04em;
+}
+
+
+.contact-help-description {
+
+  max-width: 500px;
+
+  margin:
+    17px 0 0;
+
+  color:
+    rgba(221, 245, 255, .91);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   HELP ACTIONS
+========================================================= */
+
+.contact-help-actions {
+
+  display: grid;
+
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+
+.contact-help-action {
+
+  position: relative;
+
+  min-height: 61px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    8px 11px;
+
+  border:
+    1px solid rgba(255, 255, 255, .16);
+
+  border-radius: 16px;
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, .085);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  text-decoration: none;
+
+  transition:
+    transform .35s cubic-bezier(.22, 1, .36, 1),
+    background .35s ease,
+    border-color .35s ease;
+}
+
+
+.contact-help-action:hover {
+
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(255, 255, 255, .30);
+
+  background:
+    rgba(255, 255, 255, .15);
+}
+
+
+.contact-help-action-icon {
+
+  flex:
+    0 0 42px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0757a6;
+
+  border:
+    1px solid rgba(255, 255, 255, .86);
+
+  border-radius: 12px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 7px 15px rgba(0, 25, 70, .10);
+}
+
+
+.contact-help-action-content {
+
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.contact-help-action-label {
+
+  color:
+    rgba(221, 245, 255, .58);
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: .13em;
+}
+
+
+.contact-help-action-title {
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.contact-help-action-arrow {
+
+  flex-shrink: 0;
+
+  color:
+    rgba(255, 255, 255, .74);
+
+  transition:
+    transform .35s ease;
+}
+
+
+.contact-help-action:hover
+.contact-help-action-arrow {
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================================
+   PREMIUM APPOINTMENT BUTTON
+========================================================= */
+
+.premium-button {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  min-height: 68px;
+
+  margin-top: 18px;
+
+  padding:
+    7px 7px 7px 20px;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  border:
+    1px solid rgba(255, 255, 255, .38);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .16),
+      rgba(255, 255, 255, .08)
+    );
+
+  backdrop-filter:
+    blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
+
+  text-decoration: none;
+
+  isolation: isolate;
+
+  box-shadow:
+    0 15px 32px rgba(0, 25, 70, .13),
+    inset 0 1px 0 rgba(255, 255, 255, .30);
+
+  transition:
+    transform .45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .45s ease,
+    background .45s ease,
+    border-color .45s ease;
+}
+
+
+.premium-button:hover {
+
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(255, 255, 255, .62);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .22),
+      rgba(255, 255, 255, .11)
+    );
+
+  box-shadow:
+    0 21px 40px rgba(0, 25, 70, .20),
+    inset 0 1px 0 rgba(255, 255, 255, .40);
+}
+
+
+.premium-button::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 1px;
+
+  left: 20px;
+  right: 20px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, .40);
+
+  z-index: 4;
+}
+
+
+.premium-button-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 4px;
+}
+
+
+.premium-button-label {
+
+  color:
+    rgba(255, 255, 255, .66);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: .10em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+.premium-button-text {
+
+  color: #ffffff;
+
+  font-size: 12.5px;
+
+  font-weight: 750;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+
+.premium-button-arrow {
+
+  position: relative;
+
+  z-index: 6;
+
+  flex:
+    0 0 50px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0354a5;
+
+  border:
+    1px solid rgba(255, 255, 255, .82);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #effaff
+    );
+
+  box-shadow:
+    0 7px 16px rgba(0, 35, 70, .13),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+
+  transition:
+    transform .45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .45s ease;
+}
+
+
+.premium-button:hover
+.premium-button-arrow {
+
+  transform:
+    translateX(4px);
+
+  box-shadow:
+    0 10px 21px rgba(0, 35, 70, .17),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+
+/* =========================================================
+   BUTTON SHINE
+========================================================= */
+
+.premium-button-shine {
+
+  position: absolute;
+
+  top: -100%;
+  left: -50%;
+
+  width: 32%;
+  height: 300%;
+
+  transform:
+    rotate(22deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, .20),
+      transparent
+    );
+
+  pointer-events: none;
+
+  z-index: 3;
+
+  transition:
+    left .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.premium-button:hover
+.premium-button-shine {
+
+  left: 125%;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .contact-page-header {
+
+    padding-top: 166px;
+    padding-bottom: 105px;
+  }
+
+
+  .contact-information {
+
+    padding-bottom: 120px;
+  }
+
+
+  .contact-main-section {
+
+    padding-bottom: 120px;
+  }
+
+
+  .contact-information-grid {
+
+    gap: 22px;
+  }
+
+
+  .contact-main-grid {
+
+    gap: 28px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1023px) {
+
+  .contact-page-header {
+
+    padding-top: 138px;
+    padding-bottom: 75px;
+  }
+
+
+  .contact-header-card {
+
+    padding: 40px;
+  }
+
+
+  .contact-section-heading {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+
+  .contact-section-description {
+
+    max-width: 560px;
+
+    text-align: left;
+  }
+
+
+  .contact-information {
+
+    padding-bottom: 90px;
+  }
+
+
+  .contact-information-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+
+  .contact-main-section {
+
+    padding-bottom: 90px;
+  }
+
+
+  .contact-main-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .contact-map-placeholder {
+
+    min-height: 410px;
+  }
+
+
+  .contact-help-content {
+
+    padding: 36px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .contact-page-header {
+
+    padding-top: 122px;
+    padding-bottom: 64px;
+  }
+
+
+  .contact-header-card {
+
+    padding:
+      30px 20px;
+
+    border-radius: 24px;
+  }
+
+
+  .contact-header-content {
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .contact-header-icon {
+
+    width: 50px;
+    height: 50px;
+
+    flex-basis: 50px;
+
+    border-radius: 15px;
+  }
+
+
+  .contact-page-title {
+
+    margin-top: 13px;
+
+    font-size:
+      clamp(36px, 10vw, 48px);
+  }
+
+
+  .contact-page-description {
+
+    margin-top: 17px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /* ---------------------------------------------
+     SECTION HEADING
+  --------------------------------------------- */
+
+  .contact-section-heading {
+
+    margin-bottom: 30px;
+  }
+
+
+  .contact-section-title {
+
+    font-size: 31px;
+  }
+
+
+  .contact-section-description {
+
+    font-size: 14px;
+  }
+
+
+  /* ---------------------------------------------
+     INFO
+  --------------------------------------------- */
+
+  .contact-information {
+
+    padding-bottom: 70px;
+  }
+
+
+  .contact-information-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .contact-info-card {
+
+    padding: 22px;
+
+    border-radius: 21px;
+  }
+
+
+  .contact-info-title {
+
+    margin-top: 17px;
+  }
+
+
+  /* ---------------------------------------------
+     MAIN
+  --------------------------------------------- */
+
+  .contact-main-section {
+
+    padding-bottom: 70px;
+  }
+
+
+  .contact-main-grid {
+
+    gap: 14px;
+  }
+
+
+  /* ---------------------------------------------
+     MAP
+  --------------------------------------------- */
+
+  .contact-map-card {
+
+    border-radius: 23px;
+  }
+
+
+  .contact-map-placeholder {
+
+    min-height: 340px;
+  }
+
+
+  .contact-map-content {
+
+    width:
+      calc(100% - 40px);
+
+    padding:
+      25px 20px;
+
+    border-radius: 19px;
+  }
+
+
+  .contact-map-footer {
+
+    padding:
+      16px 17px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .directions-button {
+
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  /* ---------------------------------------------
+     HELP CARD
+  --------------------------------------------- */
+
+  .contact-help-card {
+
+    border-radius: 23px;
+  }
+
+
+  .contact-help-content {
+
+    padding:
+      29px 22px;
+  }
+
+
+  .contact-help-title {
+
+    font-size: 32px;
+  }
+
+
+  .contact-help-description {
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .contact-help-actions {
+
+    margin-top: 24px;
+  }
+
+
+  /* ---------------------------------------------
+     BUTTON
+  --------------------------------------------- */
+
+  .premium-button {
+
+    min-height: 64px;
+
+    margin-top: 16px;
+  }
+
+
+  .premium-button-arrow {
+
+    width: 49px;
+    height: 49px;
+
+    flex-basis: 49px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .contact-page-header {
+
+    padding-top: 116px;
+    padding-bottom: 58px;
+  }
+
+
+  .contact-page-title {
+
+    font-size: 34px;
+  }
+
+
+  .contact-section-title {
+
+    font-size: 29px;
+  }
+
+
+  .contact-info-card {
+
+    padding: 20px;
+  }
+
+
+  .contact-map-placeholder {
+
+    min-height: 310px;
+  }
+
+
+  .contact-map-content {
+
+    width:
+      calc(100% - 30px);
+
+    padding:
+      22px 17px;
+  }
+
+
+  .contact-help-content {
+
+    padding:
+      25px 19px;
+  }
+
+
+  .contact-help-title {
+
+    font-size: 29px;
+  }
+
+
+  .premium-button {
+
+    gap: 10px;
+
+    padding-left: 14px;
+  }
+
+
+  .premium-button-arrow {
+
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+
+    border-radius: 13px;
+  }
+
+
+  .premium-button-text {
+
+    font-size: 10.5px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .glass-card,
+  .glass-shine,
+  .contact-info-card,
+  .contact-card-link,
+  .directions-button,
+  .contact-help-action,
+  .premium-button,
+  .premium-button-arrow,
+  .premium-button-shine {
+
+    transition: none;
+  }
+
+}
+
+</style>
