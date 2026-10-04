@@ -9,25 +9,39 @@ const year = new Date().getFullYear();
       <div class="footer-grid">
 
         <!-- BRAND -->
-        <div class="footer-brand">
-          <a href="/" class="footer-logo" aria-label="Health Vision Hospital Home">
-            <div class="footer-logo-mark">H</div>
-            <div class="footer-logo-text">
-              <span class="footer-hospital-name">Health Vision</span>
-              <span class="footer-hospital-type">HOSPITAL</span>
-            </div>
-          </a>
+<div class="footer-brand">
+  <a
+    href="/"
+    class="footer-logo"
+    aria-label="Health Vision Hospital Home"
+  >
+    <div class="footer-logo-mark">
+      <img
+        src="/logooo.png"
+        alt="Health Vision Hospital"
+        width="80"
+        height="80"
+        decoding="async"
+        draggable="false"
+      />
+    </div>
 
-          <p class="footer-description">
-            Providing dependable healthcare with compassionate care,
-            professional medical services and a patient-focused approach.
-          </p>
+    <div class="footer-logo-text">
+      <span class="footer-hospital-name">Health Vision</span>
+      <span class="footer-hospital-type">HOSPITAL</span>
+    </div>
+  </a>
 
-          <a href="/appointment" class="footer-appointment-link">
-            <span>Book an Appointment</span>
-            <ArrowUpRight size={16} strokeWidth={1.8} />
-          </a>
-        </div>
+  <p class="footer-description">
+    Providing dependable healthcare with compassionate care,
+    professional medical services and a patient-focused approach.
+  </p>
+
+  <a href="/appointment" class="footer-appointment-link">
+    <span>Book an Appointment</span>
+    <ArrowUpRight size={16} strokeWidth={1.8} />
+  </a>
+</div>
 
         <!-- QUICK LINKS -->
         <div class="footer-column">
@@ -61,9 +75,10 @@ const year = new Date().getFullYear();
             <div class="footer-contact-item">
               <MapPin size={18} strokeWidth={1.7} />
               <address>
-                Hospital Address<br />
-                Kerala, India
-              </address>
+  Opp. Police Station,<br />
+  Near Masjid Mangalam Dam,<br />
+  Palakkad – 678706
+</address>
             </div>
 
             <a href="tel:+919074923153" class="footer-contact-item">
@@ -161,19 +176,29 @@ const year = new Date().getFullYear();
   }
 
   .footer-logo-mark {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
-    width: 40px;
-    height: 40px;
-    border-radius: 11px;
-    background: linear-gradient(135deg, #0757A6 0%, #0B78C7 52%, #3CC3FC 100%);
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 600;
-    box-shadow: 0 8px 20px rgba(7, 87, 166, 0.20);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 13px;
+  background: #ffffff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 20px rgba(7, 87, 166, 0.14);
+}
+
+.footer-logo-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
 
   .footer-logo-text {
     display: flex;
