@@ -76,26 +76,67 @@ const {
          ===================================================== -->
 
     <script>
+      const loaderStartTime = performance.now();
+
+      /*
+       * Keep the loader visible for at least 1.2 seconds.
+       * This prevents the loader from appearing as a quick
+       * blink on fast production/Vercel loads.
+       */
+      const minimumLoaderTime = 1200;
+
       const hidePageLoader = () => {
-        const loader =
-          document.getElementById("page-loader");
+        const loader = document.getElementById("page-loader");
 
         if (!loader) return;
 
-        loader.classList.add("is-hidden");
+        const elapsed =
+          performance.now() - loaderStartTime;
+
+        const remaining =
+          Math.max(
+            0,
+            minimumLoaderTime - elapsed
+          );
 
         window.setTimeout(() => {
-          loader.remove();
-        }, 450);
+
+          /*
+           * Start fade-out
+           */
+          loader.classList.add("is-hidden");
+
+          /*
+           * Remove loader completely after
+           * fade animation finishes.
+           */
+          window.setTimeout(() => {
+            loader.remove();
+          }, 450);
+
+        }, remaining);
       };
 
+
+      /*
+       * If the page is already completely loaded,
+       * start the loader timer immediately.
+       */
       if (document.readyState === "complete") {
+
         hidePageLoader();
+
       } else {
+
+        /*
+         * Wait until all page resources are loaded.
+         */
         window.addEventListener(
           "load",
           hidePageLoader,
-          { once: true }
+          {
+            once: true,
+          }
         );
       }
     </script>
@@ -106,6 +147,7 @@ const {
          ===================================================== -->
 
     <style>
+
       /* =====================================================
          PAGE LOADER
          ===================================================== */
@@ -134,9 +176,12 @@ const {
         opacity: 1;
         visibility: visible;
 
+        /*
+         * Smooth fade-out
+         */
         transition:
-          opacity 0.4s ease,
-          visibility 0.4s ease;
+          opacity 0.45s ease,
+          visibility 0.45s ease;
       }
 
 
@@ -155,6 +200,9 @@ const {
         user-select: none;
         -webkit-user-drag: none;
 
+        /*
+         * Subtle premium breathing animation
+         */
         animation:
           page-loader-pulse
           1.1s
@@ -165,7 +213,7 @@ const {
 
 
       /* =====================================================
-         HIDE
+         HIDE LOADER
          ===================================================== */
 
       .page-loader.is-hidden {
@@ -180,6 +228,7 @@ const {
          ===================================================== */
 
       @keyframes page-loader-pulse {
+
         0% {
           transform: scale(0.94);
           opacity: 0.72;
@@ -189,6 +238,7 @@ const {
           transform: scale(1);
           opacity: 1;
         }
+
       }
 
 
@@ -197,10 +247,12 @@ const {
          ===================================================== */
 
       @media (max-width: 640px) {
+
         .page-loader-logo {
           width: 76px;
           height: 76px;
         }
+
       }
 
 
@@ -209,6 +261,7 @@ const {
          ===================================================== */
 
       @media (prefers-reduced-motion: reduce) {
+
         .page-loader {
           transition: none;
         }
@@ -216,7 +269,9 @@ const {
         .page-loader-logo {
           animation: none;
         }
+
       }
+
     </style>
 
   </body>
