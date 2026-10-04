@@ -322,51 +322,13 @@ import {
             id="map"
           >
 
-            <div class="contact-map-placeholder">
-
-              <div class="map-grid"></div>
-
-              <div class="map-orb map-orb-one"></div>
-              <div class="map-orb map-orb-two"></div>
-
-              <div class="contact-map-content">
-
-                <div class="contact-map-icon">
-
-                  <MapPin
-                    size={34}
-                    strokeWidth={1.6}
-                  />
-
-                </div>
-
-                <p class="contact-map-label">
-                  OUR LOCATION
-                </p>
-
-                <p class="contact-map-title">
-                  Health Vision Hospital
-                </p>
-
-                <p class="contact-map-description">
-                  Replace this area with the hospital's Google Maps embed
-                  when the exact hospital location is available.
-                </p>
-
-              </div>
-
-
-              <div class="map-pin-shadow"></div>
-
-              <div class="map-center-pin">
-
-                <MapPin
-                  size={23}
-                  strokeWidth={2}
-                />
-
-              </div>
-
+            <div class="contact-map-placeholder contact-real-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.702881982931!2d76.53698969999999!3d10.5240516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba809a37c0468c5%3A0x7bdebe54ff4df2df!2sHealth%20Vision%20Medical%20Center!5e0!3m2!1sen!2sin!4v1791095829301!5m2!1sen!2sin"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
             </div>
 
 
@@ -385,9 +347,11 @@ import {
               </div>
 
               <a
-                href="#"
-                class="directions-button"
-              >
+                  href="https://maps.app.goo.gl/gVZYTmHMeBk3YB1t7?g_st=aw"
+                  class="directions-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
 
                 <Navigation
                   size={16}
@@ -2788,6 +2752,28 @@ section {
     transition: none;
   }
 
+}
+
+.contact-real-map {
+  position: relative;
+  overflow: hidden;
+  min-height: 440px;
+  background: #eaf4fb;
+}
+
+.contact-real-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .contact-real-map,
+  .contact-real-map iframe {
+    min-height: 340px;
+  }
 }
 
 </style>
