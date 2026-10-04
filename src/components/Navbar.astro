@@ -1,4 +1,3 @@
-
 ---
 import {
   Phone,
@@ -17,20 +16,22 @@ import {
 
     <div id="full-navbar" class="full-navbar">
 
-      <!-- ===================================================
-           NORMAL LEFT BRAND
-      ==================================================== -->
-
+      <!-- NORMAL LEFT BRAND -->
       <a
         href="/"
         class="brand-normal"
         aria-label="Health Vision Hospital Home"
       >
         <div class="logo-mark">
-<img
-  src="/logooo.png"
-  alt="Health Vision Hospital"
-/>        </div>
+          <img
+            src="/logooo.png"
+            alt="Health Vision Hospital"
+            width="80"
+            height="80"
+            decoding="async"
+            draggable="false"
+          />
+        </div>
 
         <div class="brand-text">
           <p>Health Vision</p>
@@ -39,25 +40,24 @@ import {
       </a>
 
 
-      <!-- ===================================================
-           CENTERED DYNAMIC ISLAND BRAND
-
-           This is a separate element.
-
-           It NEVER moves from left/right.
-           It is always mathematically centered.
-      ==================================================== -->
-
+      <!-- CENTERED DYNAMIC ISLAND BRAND
+           Separate element, always centered by layout
+           (no sub-pixel transforms = crisp logo + text). -->
       <a
         href="/"
         class="brand-island"
         aria-label="Health Vision Hospital Home"
       >
         <div class="logo-mark">
-<img
-  src="/logooo.png"
-  alt="Health Vision Hospital"
-/>        </div>
+          <img
+            src="/logooo.png"
+            alt="Health Vision Hospital"
+            width="80"
+            height="80"
+            decoding="async"
+            draggable="false"
+          />
+        </div>
 
         <div class="brand-text">
           <p>Health Vision</p>
@@ -66,48 +66,22 @@ import {
       </a>
 
 
-      <!-- ===================================================
-           DESKTOP NAVIGATION
-      ==================================================== -->
-
+      <!-- DESKTOP NAVIGATION -->
       <nav
         class="desktop-navigation"
         aria-label="Main navigation"
       >
-        <a href="/" class="nav-item nav-active">
-          Home
-        </a>
-
-        <a href="/about" class="nav-item">
-          About
-        </a>
-
-        <a href="/services" class="nav-item">
-          Services
-        </a>
-
-        <a href="/doctors" class="nav-item">
-          Doctors
-        </a>
-
-        <a href="/facilities" class="nav-item">
-          Facilities
-        </a>
-
-        <a href="/gallery" class="nav-item">
-          Gallery
-        </a>
-
-        <a href="/contact" class="nav-item">
-          Contact
-        </a>
+        <a href="/" class="nav-item nav-active">Home</a>
+        <a href="/about" class="nav-item">About</a>
+        <a href="/services" class="nav-item">Services</a>
+        <a href="/doctors" class="nav-item">Doctors</a>
+        <a href="/facilities" class="nav-item">Facilities</a>
+        <a href="/gallery" class="nav-item">Gallery</a>
+        <a href="/contact" class="nav-item">Contact</a>
       </nav>
 
 
-      <!-- ===================================================
-           DESKTOP ACTIONS
-      ==================================================== -->
-
+      <!-- DESKTOP ACTIONS -->
       <div class="desktop-actions">
 
         <a
@@ -119,30 +93,15 @@ import {
           <span>Call</span>
         </a>
 
-
         <!-- PREMIUM APPOINTMENT BUTTON -->
-
-        <a
-          href="/appointment"
-          class="btn-premium"
-        >
+        <a href="/appointment" class="btn-premium">
           <span class="btn-premium-content">
-
-            <span class="btn-premium-label">
-              Healthcare
-            </span>
-
-            <span class="btn-premium-text">
-              Book Appointment
-            </span>
-
+            <span class="btn-premium-label">Healthcare</span>
+            <span class="btn-premium-text">Book Appointment</span>
           </span>
 
           <span class="btn-premium-arrow">
-            <ArrowUpRight
-              size={20}
-              stroke-width={2}
-            />
+            <ArrowUpRight size={20} stroke-width={2} />
           </span>
 
           <span class="btn-premium-shine"></span>
@@ -151,10 +110,7 @@ import {
       </div>
 
 
-      <!-- ===================================================
-           MOBILE MENU BUTTON
-      ==================================================== -->
-
+      <!-- MOBILE MENU BUTTON -->
       <button
         id="mobile-menu-button"
         type="button"
@@ -164,45 +120,26 @@ import {
         aria-controls="mobile-menu"
       >
         <span class="menu-icon-wrapper">
-
-          <Menu
-            id="menu-icon"
-            size={21}
-            stroke-width={1.8}
-          />
-
-          <X
-            id="close-icon"
-            size={21}
-            stroke-width={1.8}
-          />
-
+          <Menu id="menu-icon" size={21} stroke-width={1.8} />
+          <X id="close-icon" size={21} stroke-width={1.8} />
         </span>
       </button>
 
     </div>
 
 
-    <!-- =====================================================
-         MOBILE MENU
-
-         IMPORTANT:
-         This is completely separate from Dynamic Island.
-    ====================================================== -->
-
+    <!-- MOBILE MENU (completely separate from Dynamic Island) -->
     <div
       id="mobile-menu"
       class="mobile-menu"
       aria-hidden="true"
     >
-
       <div class="mobile-menu-inner">
 
         <nav
           class="mobile-navigation"
           aria-label="Mobile navigation"
         >
-
           <a href="/" class="mobile-nav-item">
             <span>Home</span>
             <ArrowUpRight size={16} />
@@ -237,48 +174,26 @@ import {
             <span>Contact</span>
             <ArrowUpRight size={16} />
           </a>
-
         </nav>
 
 
-        <!-- =================================================
-             MOBILE ACTIONS
-        ================================================== -->
-
+        <!-- MOBILE ACTIONS -->
         <div class="mobile-actions">
 
-          <a
-            href="tel:+919999999999"
-            class="mobile-call"
-          >
+          <a href="tel:+919999999999" class="mobile-call">
             <Phone size={17} />
             <span>Call Hospital</span>
           </a>
 
-
           <!-- PREMIUM MOBILE APPOINTMENT BUTTON -->
-
-          <a
-            href="/appointment"
-            class="btn-premium"
-          >
+          <a href="/appointment" class="btn-premium">
             <span class="btn-premium-content">
-
-              <span class="btn-premium-label">
-                Healthcare
-              </span>
-
-              <span class="btn-premium-text">
-                Book Appointment
-              </span>
-
+              <span class="btn-premium-label">Healthcare</span>
+              <span class="btn-premium-text">Book Appointment</span>
             </span>
 
             <span class="btn-premium-arrow">
-              <ArrowUpRight
-                size={20}
-                stroke-width={2}
-              />
+              <ArrowUpRight size={20} stroke-width={2} />
             </span>
 
             <span class="btn-premium-shine"></span>
@@ -287,7 +202,6 @@ import {
         </div>
 
       </div>
-
     </div>
 
   </div>
@@ -299,22 +213,11 @@ import {
      ELEMENTS
   ======================================================== */
 
-  const shell =
-    document.getElementById("navbar-shell");
-
-  const menuButton =
-    document.getElementById(
-      "mobile-menu-button"
-    );
-
-  const mobileMenu =
-    document.getElementById("mobile-menu");
-
-  const menuIcon =
-    document.getElementById("menu-icon");
-
-  const closeIcon =
-    document.getElementById("close-icon");
+  const shell = document.getElementById("navbar-shell");
+  const menuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
 
 
   /* ========================================================
@@ -322,47 +225,108 @@ import {
   ======================================================== */
 
   let menuOpen = false;
-
   let ticking = false;
 
+  /*
+   * Scroll distance needed to fully become the Dynamic Island.
+   * 0px = normal navbar, 180px = Dynamic Island
+   */
+  const NAV_MORPH_DISTANCE = 180;
 
   /*
-   * Amount of scrolling required to completely
-   * transform the navbar into the Dynamic Island.
+   * SMOOTHING
    *
-   * 0px   = normal navbar
-   * 180px = Dynamic Island
+   * The scroll position only sets a TARGET progress.
+   * The value actually written to CSS (--nav-progress) glides
+   * toward that target every frame. This removes the choppy
+   * steps caused by mouse-wheel jumps, touch flings and
+   * low-frequency scroll events, on every device.
+   *
+   * SMOOTH_TIME: seconds to cover ~63% of the remaining distance.
+   * Lower = snappier, higher = floatier.
    */
+  const SMOOTH_TIME = 0.085;
 
-  const NAV_MORPH_DISTANCE = 180;
+  const prefersReducedMotion =
+    window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  let targetProgress = 0;
+  let currentProgress = 0;
+  let lastFrameTime = 0;
+  let animating = false;
+
+
+  /* ========================================================
+     WRITE CSS VARIABLE
+  ======================================================== */
+
+  const writeProgress = (value: number) => {
+    if (!shell) {
+      return;
+    }
+
+    shell.style.setProperty(
+      "--nav-progress",
+      value.toFixed(4)
+    );
+  };
+
+
+  /* ========================================================
+     SMOOTH ANIMATION LOOP (frame-rate independent)
+  ======================================================== */
+
+  const animateProgress = (now: number) => {
+
+    const dt = Math.min(
+      0.05,
+      Math.max(0.001, (now - lastFrameTime) / 1000)
+    );
+
+    lastFrameTime = now;
+
+    /* Same feel at 60Hz, 90Hz, 120Hz and 144Hz displays */
+    const factor = 1 - Math.exp(-dt / SMOOTH_TIME);
+
+    currentProgress +=
+      (targetProgress - currentProgress) * factor;
+
+    if (Math.abs(targetProgress - currentProgress) < 0.0005) {
+      currentProgress = targetProgress;
+      writeProgress(currentProgress);
+      animating = false;
+      return;
+    }
+
+    writeProgress(currentProgress);
+
+    window.requestAnimationFrame(animateProgress);
+  };
 
 
   /* ========================================================
      SET PROGRESS
   ======================================================== */
 
-  const setNavbarProgress = (
-    progress: number
-  ) => {
+  const setNavbarProgress = (progress: number) => {
 
     if (!shell) {
       return;
     }
 
-    const safeProgress =
-      Math.min(
-        1,
-        Math.max(
-          0,
-          progress
-        )
-      );
+    targetProgress = Math.min(1, Math.max(0, progress));
 
-    shell.style.setProperty(
-      "--nav-progress",
-      safeProgress.toFixed(4)
-    );
+    if (prefersReducedMotion.matches) {
+      currentProgress = targetProgress;
+      writeProgress(currentProgress);
+      return;
+    }
 
+    if (!animating) {
+      animating = true;
+      lastFrameTime = performance.now();
+      window.requestAnimationFrame(animateProgress);
+    }
   };
 
 
@@ -377,72 +341,33 @@ import {
       return;
     }
 
+    const scrollY = window.scrollY;
 
-    const scrollY =
-      window.scrollY;
-
-
-    /*
-     * ------------------------------------------------------
-     * MOBILE MENU
-     * ------------------------------------------------------
-     */
-
+    /* MOBILE MENU */
     if (menuOpen) {
-
       setNavbarProgress(0);
-
       ticking = false;
-
       return;
     }
 
-
-    /*
-     * ------------------------------------------------------
-     * TOP OF PAGE
-     * ------------------------------------------------------
-     */
-
+    /* TOP OF PAGE (also covers iOS rubber-band overscroll) */
     if (scrollY <= 0) {
-
       setNavbarProgress(0);
-
       ticking = false;
-
       return;
     }
 
-
     /*
-     * ------------------------------------------------------
      * CONTINUOUS MORPH
-     * ------------------------------------------------------
-     *
      * 0    = full navbar
-     * 0.25 = slightly reduced
-     * 0.50 = medium
-     * 0.75 = almost island
      * 1    = Dynamic Island
-     *
      * The brand itself NEVER moves.
      */
+    const progress = Math.min(1, scrollY / NAV_MORPH_DISTANCE);
 
-    const progress =
-      Math.min(
-        1,
-        scrollY /
-          NAV_MORPH_DISTANCE
-      );
-
-
-    setNavbarProgress(
-      progress
-    );
-
+    setNavbarProgress(progress);
 
     ticking = false;
-
   };
 
 
@@ -450,20 +375,16 @@ import {
      REQUEST ANIMATION FRAME
   ======================================================== */
 
-  const requestNavbarUpdate =
-    () => {
+  const requestNavbarUpdate = () => {
 
-      if (ticking) {
-        return;
-      }
+    if (ticking) {
+      return;
+    }
 
-      ticking = true;
+    ticking = true;
 
-      window.requestAnimationFrame(
-        updateNavbar
-      );
-
-    };
+    window.requestAnimationFrame(updateNavbar);
+  };
 
 
   /* ========================================================
@@ -473,17 +394,26 @@ import {
   window.addEventListener(
     "scroll",
     requestNavbarUpdate,
-    {
-      passive: true,
-    }
+    { passive: true }
   );
 
 
   /* ========================================================
      INITIAL
+     Start with the correct value immediately (no animation
+     on first paint, e.g. when the page loads already scrolled
+     or is restored after a refresh).
   ======================================================== */
 
-  updateNavbar();
+  if (shell) {
+    const initial = menuOpen
+      ? 0
+      : Math.min(1, Math.max(0, window.scrollY / NAV_MORPH_DISTANCE));
+
+    targetProgress = initial;
+    currentProgress = initial;
+    writeProgress(initial);
+  }
 
 
   /* ========================================================
@@ -492,53 +422,23 @@ import {
 
   const openMenu = () => {
 
-    if (
-      !mobileMenu ||
-      !menuButton
-    ) {
+    if (!mobileMenu || !menuButton) {
       return;
     }
 
-
     menuOpen = true;
 
-
-    /*
-     * Always restore full navbar while
-     * mobile menu is open.
-     */
-
+    /* Always restore full navbar while mobile menu is open. */
     setNavbarProgress(0);
 
+    mobileMenu.classList.add("mobile-menu-open");
+    mobileMenu.setAttribute("aria-hidden", "false");
 
-    mobileMenu.classList.add(
-      "mobile-menu-open"
-    );
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Close navigation menu");
 
-    mobileMenu.setAttribute(
-      "aria-hidden",
-      "false"
-    );
-
-    menuButton.setAttribute(
-      "aria-expanded",
-      "true"
-    );
-
-    menuButton.setAttribute(
-      "aria-label",
-      "Close navigation menu"
-    );
-
-
-    menuIcon?.classList.add(
-      "menu-icon-hidden"
-    );
-
-    closeIcon?.classList.add(
-      "close-icon-visible"
-    );
-
+    menuIcon?.classList.add("menu-icon-hidden");
+    closeIcon?.classList.add("close-icon-visible");
   };
 
 
@@ -552,45 +452,19 @@ import {
       return;
     }
 
-
     menuOpen = false;
 
+    mobileMenu.classList.remove("mobile-menu-open");
+    mobileMenu.setAttribute("aria-hidden", "true");
 
-    mobileMenu.classList.remove(
-      "mobile-menu-open"
-    );
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation menu");
 
-    mobileMenu.setAttribute(
-      "aria-hidden",
-      "true"
-    );
+    menuIcon?.classList.remove("menu-icon-hidden");
+    closeIcon?.classList.remove("close-icon-visible");
 
-    menuButton.setAttribute(
-      "aria-expanded",
-      "false"
-    );
-
-    menuButton.setAttribute(
-      "aria-label",
-      "Open navigation menu"
-    );
-
-
-    menuIcon?.classList.remove(
-      "menu-icon-hidden"
-    );
-
-    closeIcon?.classList.remove(
-      "close-icon-visible"
-    );
-
-
-    /*
-     * Recalculate navbar immediately.
-     */
-
+    /* Recalculate navbar immediately. */
     updateNavbar();
-
   };
 
 
@@ -598,24 +472,17 @@ import {
      MENU BUTTON
   ======================================================== */
 
-  menuButton?.addEventListener(
-    "click",
-    () => {
+  menuButton?.addEventListener("click", () => {
 
-      const isOpen =
-        menuButton.getAttribute(
-          "aria-expanded"
-        ) === "true";
+    const isOpen =
+      menuButton.getAttribute("aria-expanded") === "true";
 
-
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
     }
-  );
+  });
 
 
   /* ========================================================
@@ -625,14 +492,9 @@ import {
   mobileMenu
     ?.querySelectorAll("a")
     .forEach((link) => {
-
-      link.addEventListener(
-        "click",
-        () => {
-          closeMenu();
-        }
-      );
-
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
     });
 
 
@@ -640,81 +502,47 @@ import {
      ESCAPE
   ======================================================== */
 
-  document.addEventListener(
-    "keydown",
-    (event) => {
-
-      if (
-        event.key === "Escape" &&
-        menuOpen
-      ) {
-        closeMenu();
-      }
-
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuOpen) {
+      closeMenu();
     }
-  );
+  });
 
 
   /* ========================================================
      CLICK OUTSIDE
   ======================================================== */
 
-  document.addEventListener(
-    "pointerdown",
-    (event) => {
+  document.addEventListener("pointerdown", (event) => {
 
-      if (
-        !menuOpen ||
-        !shell
-      ) {
-        return;
-      }
-
-
-      const target =
-        event.target;
-
-
-      if (
-        target instanceof Node &&
-        !shell.contains(target)
-      ) {
-        closeMenu();
-      }
-
+    if (!menuOpen || !shell) {
+      return;
     }
-  );
+
+    const target = event.target;
+
+    if (target instanceof Node && !shell.contains(target)) {
+      closeMenu();
+    }
+  });
 
 
   /* ========================================================
      BREAKPOINT
   ======================================================== */
 
-  const mediaQuery =
-    window.matchMedia(
-      "(min-width: 1280px)"
-    );
+  const mediaQuery = window.matchMedia("(min-width: 1280px)");
 
+  const handleBreakpoint = () => {
 
-  const handleBreakpoint =
-    () => {
+    if (mediaQuery.matches && menuOpen) {
+      closeMenu();
+    }
 
-      if (
-        mediaQuery.matches &&
-        menuOpen
-      ) {
-        closeMenu();
-      }
+    requestNavbarUpdate();
+  };
 
-      requestNavbarUpdate();
-
-    };
-
-
-  mediaQuery.addEventListener(
-    "change",
-    handleBreakpoint
-  );
+  mediaQuery.addEventListener("change", handleBreakpoint);
 
 
   /* ========================================================
@@ -724,8 +552,13 @@ import {
   window.addEventListener(
     "resize",
     requestNavbarUpdate,
-    {
-      passive: true,
-    }
+    { passive: true }
   );
+
+
+  /* ========================================================
+     BACK/FORWARD CACHE + TAB RETURN
+  ======================================================== */
+
+  window.addEventListener("pageshow", requestNavbarUpdate);
 </script>
