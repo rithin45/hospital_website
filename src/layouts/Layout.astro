@@ -5,13 +5,29 @@ import Footer from "../components/Footer.astro";
 interface Props {
   title?: string;
   description?: string;
+  canonical?: string;
+  image?: string;
 }
 
 const {
   title = "Health Vision Hospital",
   description =
     "Quality healthcare with compassionate care and modern medical facilities.",
+  canonical,
+  image = "/hospital.png",
 } = Astro.props;
+
+const canonicalUrl =
+  canonical ??
+  new URL(
+    Astro.url.pathname,
+    "https://healthvisionhospital.org"
+  ).href;
+
+const socialImageUrl = new URL(
+  image,
+  "https://healthvisionhospital.org"
+).href;
 ---
 
 <!doctype html>
@@ -27,10 +43,30 @@ const {
       content={description}
     />
 
+      <link
+        rel="canonical"
+        href={canonicalUrl}
+      />
+
     <link
       rel="icon"
       href="/logooo.png"
     />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Health Vision Hospital" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={socialImageUrl} />
+<meta property="og:image:alt" content={title} />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageUrl} />
+    
   </head>
 
   <body>

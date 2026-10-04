@@ -10,9 +10,47 @@ import AppointmentCTA from "../components/home/AppointmentCTA.astro";
 ---
 
 <Layout
-  title="Health Vision Hospital | Quality Healthcare"
-  description="Health Vision Hospital provides compassionate healthcare with modern medical facilities."
+  title="Health Vision Hospital | Hospital in Palakkad, Kerala"
+  description="Health Vision Hospital in Palakkad, Kerala, provides patient-focused healthcare and medical services in a comfortable environment. Open 24 hours."
 >
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    "@id": "https://healthvisionhospital.org/#hospital",
+    "name": "Health Vision Hospital",
+    "url": "https://healthvisionhospital.org/",
+    "logo": "https://healthvisionhospital.org/logooo.png",
+    "image": "https://healthvisionhospital.org/hospital.png",
+    "description": "Health Vision Hospital provides patient-focused healthcare and medical services in Palakkad, Kerala.",
+    "telephone": "+91 9074923153",
+    "email": "info@healthvisionhospital.org",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Opp. Police Station, Near Masjid Mangalam Dam",
+      "addressLocality": "Palakkad",
+      "postalCode": "678706",
+      "addressRegion": "Kerala",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ]
+  }
+</script>
   <Navbar />
 
   <main>
