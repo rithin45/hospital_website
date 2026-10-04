@@ -8388,3 +8388,754 @@ button {
 }
 
 
+/* =========================================================
+   APPOINTMENT FORM  -  modern glass design
+   Works with the existing AppointmentForm.jsx class names.
+   No JSX changes needed.
+========================================================= */
+
+.schedule-form {
+  --af-primary: #0354a5;
+  --af-primary-2: #0b6fd0;
+  --af-accent: #22b8ff;
+  --af-ink: #0f2742;
+  --af-muted: #60758b;
+  --af-placeholder: #93a4b8;
+  --af-line: rgba(3, 84, 165, 0.12);
+  --af-surface: rgba(255, 255, 255, 0.78);
+  --af-surface-hover: rgba(255, 255, 255, 0.94);
+  --af-danger: #d92d4a;
+  --af-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: clamp(22px, 3.2vw, 38px);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      120% 80% at 100% 0%,
+      rgba(34, 184, 255, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      90% 70% at 0% 100%,
+      rgba(3, 84, 165, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(240, 249, 255, 0.88)
+    );
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 30px 80px -24px rgba(3, 84, 165, 0.28),
+    0 8px 24px -12px rgba(15, 39, 66, 0.10);
+
+  isolation: isolate;
+}
+
+/* Thin gradient edge */
+.schedule-form::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  padding: 1px;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      140deg,
+      rgba(34, 184, 255, 0.55),
+      rgba(3, 84, 165, 0.05) 40%,
+      rgba(3, 84, 165, 0.30)
+    );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.schedule-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.schedule-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.schedule-field label {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--af-ink);
+
+  font-size: 12.5px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+
+  cursor: pointer;
+}
+
+.schedule-field label svg {
+  flex: 0 0 auto;
+
+  width: 26px;
+  height: 26px;
+
+  padding: 5px;
+
+  border-radius: 9px;
+
+  color: var(--af-primary);
+
+  background:
+    linear-gradient(145deg, #eaf6ff, #d9eeff);
+
+  box-shadow: inset 0 0 0 1px rgba(3, 84, 165, 0.08);
+
+  transition:
+    color 250ms var(--af-ease),
+    background 250ms var(--af-ease),
+    transform 350ms var(--af-ease);
+}
+
+.schedule-field:focus-within label svg {
+  color: #fff;
+
+  background:
+    linear-gradient(145deg, var(--af-primary-2), var(--af-primary));
+
+  transform: translateY(-1px) scale(1.06);
+}
+
+
+/* =========================================================
+   INPUT SHELL
+========================================================= */
+
+.schedule-input-shell {
+  position: relative;
+
+  display: flex;
+  align-items: stretch;
+
+  border: 1px solid var(--af-line);
+  border-radius: 16px;
+
+  background: var(--af-surface);
+
+  box-shadow:
+    0 1px 2px rgba(15, 39, 66, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  transition:
+    border-color 250ms var(--af-ease),
+    background 250ms var(--af-ease),
+    box-shadow 300ms var(--af-ease),
+    transform 300ms var(--af-ease);
+}
+
+.schedule-input-shell:hover {
+  border-color: rgba(3, 84, 165, 0.26);
+
+  background: var(--af-surface-hover);
+}
+
+.schedule-input-shell:focus-within {
+  border-color: var(--af-primary-2);
+
+  background: #fff;
+
+  box-shadow:
+    0 0 0 4px rgba(11, 111, 208, 0.13),
+    0 12px 28px -12px rgba(3, 84, 165, 0.35);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   INPUTS / SELECT / TEXTAREA
+========================================================= */
+
+.schedule-input-shell input,
+.schedule-input-shell select,
+.schedule-input-shell textarea {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+
+  border: 0;
+  outline: 0;
+
+  color: var(--af-ink);
+
+  background: transparent;
+
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.schedule-input-shell input,
+.schedule-input-shell select {
+  height: 54px;
+
+  padding: 0 16px;
+}
+
+.schedule-input-shell textarea {
+  min-height: 130px;
+
+  padding: 15px 16px;
+
+  resize: vertical;
+
+  line-height: 1.65;
+}
+
+.schedule-input-shell input::placeholder,
+.schedule-input-shell textarea::placeholder {
+  color: var(--af-placeholder);
+
+  font-weight: 450;
+}
+
+/* Autofill: keep it on-brand */
+.schedule-input-shell input:-webkit-autofill {
+  -webkit-text-fill-color: var(--af-ink);
+
+  box-shadow: 0 0 0 40px #f0f8ff inset;
+
+  border-radius: 16px;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.schedule-select-shell select {
+  padding-right: 46px;
+
+  cursor: pointer;
+}
+
+/* Placeholder state ("Select department") */
+.schedule-select-shell select:invalid {
+  color: var(--af-placeholder);
+}
+
+.schedule-select-shell select option {
+  color: var(--af-ink);
+
+  background: #fff;
+}
+
+.schedule-select-arrow {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  color: var(--af-primary);
+
+  background: #eaf6ff;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  transition:
+    transform 350ms var(--af-ease),
+    background 250ms var(--af-ease),
+    color 250ms var(--af-ease);
+}
+
+.schedule-select-shell:focus-within .schedule-select-arrow {
+  color: #fff;
+
+  background: var(--af-primary);
+
+  transform: translateY(-50%) rotate(180deg);
+}
+
+
+/* =========================================================
+   DATE + TIME
+========================================================= */
+
+.schedule-input-shell input[type="date"],
+.schedule-input-shell input[type="time"] {
+  cursor: pointer;
+
+  min-height: 54px;
+}
+
+.schedule-input-shell input[type="date"]:invalid::-webkit-datetime-edit,
+.schedule-input-shell input[type="time"]:invalid::-webkit-datetime-edit {
+  color: var(--af-placeholder);
+}
+
+.schedule-input-shell input::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+
+  padding: 6px;
+
+  border-radius: 9px;
+
+  background-color: #eaf6ff;
+
+  cursor: pointer;
+
+  opacity: 0.85;
+
+  transition:
+    background-color 200ms ease,
+    opacity 200ms ease;
+}
+
+.schedule-input-shell input::-webkit-calendar-picker-indicator:hover {
+  background-color: #d4ebff;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   VALIDATION STATE
+========================================================= */
+
+.schedule-input-shell:has([aria-invalid="true"]) {
+  border-color: rgba(217, 45, 74, 0.55);
+
+  background: #fffafb;
+}
+
+.schedule-input-shell:has([aria-invalid="true"]):focus-within {
+  border-color: var(--af-danger);
+
+  box-shadow:
+    0 0 0 4px rgba(217, 45, 74, 0.12),
+    0 12px 28px -12px rgba(217, 45, 74, 0.30);
+}
+
+.schedule-field:has([aria-invalid="true"]) label svg {
+  color: var(--af-danger);
+
+  background: #ffe9ed;
+}
+
+.appointment-validation-error {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0;
+
+  color: var(--af-danger);
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  animation: af-error-in 380ms var(--af-ease) both;
+}
+
+.appointment-validation-error::before {
+  content: "!";
+
+  flex: 0 0 auto;
+
+  width: 16px;
+  height: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background: var(--af-danger);
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.appointment-submit-error {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 14px 16px;
+
+  border: 1px solid rgba(217, 45, 74, 0.22);
+  border-radius: 16px;
+
+  color: #9f1d36;
+
+  background:
+    linear-gradient(145deg, #fff3f5, #fff9fa);
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  animation: af-error-in 420ms var(--af-ease) both;
+}
+
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.schedule-input-shell:has(:disabled) {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.schedule-input-shell :disabled {
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.schedule-submit-row {
+  margin-top: 6px;
+}
+
+.schedule-submit {
+  position: relative;
+
+  width: 100%;
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 8px 8px 8px 26px;
+
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 20px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--af-primary-2) 0%,
+      var(--af-primary) 55%,
+      #023c78 100%
+    );
+
+  box-shadow:
+    0 18px 36px -12px rgba(3, 84, 165, 0.60),
+    0 4px 10px -4px rgba(3, 84, 165, 0.40),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+
+  font: inherit;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    transform 350ms var(--af-ease),
+    box-shadow 350ms var(--af-ease),
+    filter 250ms ease;
+}
+
+/* Moving shine */
+.schedule-submit::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: -60%;
+
+  width: 40%;
+
+  background:
+    linear-gradient(
+      100deg,
+      transparent,
+      rgba(255, 255, 255, 0.32),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 800ms var(--af-ease);
+
+  pointer-events: none;
+}
+
+.schedule-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 24px 44px -12px rgba(3, 84, 165, 0.66),
+    0 6px 14px -4px rgba(3, 84, 165, 0.40),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.schedule-submit:hover:not(:disabled)::before {
+  left: 130%;
+}
+
+.schedule-submit:active:not(:disabled) {
+  transform: translateY(0) scale(0.99);
+}
+
+.schedule-submit:focus-visible {
+  outline: 3px solid rgba(34, 184, 255, 0.55);
+  outline-offset: 3px;
+}
+
+.schedule-submit:disabled {
+  cursor: wait;
+
+  filter: saturate(0.85) brightness(0.97);
+}
+
+.schedule-submit-text {
+  position: relative;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.schedule-submit-icon {
+  position: relative;
+
+  flex: 0 0 46px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: var(--af-primary);
+
+  background: #fff;
+
+  box-shadow: 0 6px 16px rgba(2, 40, 90, 0.22);
+
+  transition: transform 400ms var(--af-ease);
+}
+
+.schedule-submit-icon svg {
+  transition: transform 400ms var(--af-ease);
+}
+
+.schedule-submit:hover:not(:disabled) .schedule-submit-icon svg {
+  transform: translate(2px, -2px);
+}
+
+/* Spinner */
+.appointment-spinner {
+  width: 20px;
+  height: 20px;
+
+  border: 2.5px solid rgba(3, 84, 165, 0.2);
+  border-top-color: var(--af-primary);
+  border-radius: 50%;
+
+  animation: af-spin 700ms linear infinite;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.schedule-form-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 0;
+
+  color: var(--af-muted);
+
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.schedule-form-note svg {
+  flex: 0 0 auto;
+
+  color: #1aa56a;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes af-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes af-error-in {
+  from {
+    opacity: 0;
+
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .schedule-form {
+    gap: 18px;
+
+    padding: 20px 16px;
+
+    border-radius: 24px;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .schedule-input-shell input,
+  .schedule-input-shell select {
+    height: 52px;
+  }
+
+  /* 16px stops iOS Safari zooming in on focus */
+  .schedule-input-shell input,
+  .schedule-input-shell select,
+  .schedule-input-shell textarea {
+    font-size: 16px;
+  }
+
+  .schedule-submit {
+    min-height: 58px;
+
+    padding-left: 22px;
+  }
+
+  .schedule-submit-icon {
+    flex-basis: 42px;
+
+    width: 42px;
+    height: 42px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .schedule-form *,
+  .schedule-form *::before,
+  .schedule-form *::after {
+    transition-duration: 1ms !important;
+
+    animation-duration: 1ms !important;
+  }
+}
