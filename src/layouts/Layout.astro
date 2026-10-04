@@ -9,7 +9,8 @@ interface Props {
 
 const {
   title = "Health Vision Hospital",
-  description = "Quality healthcare with compassionate care and modern medical facilities."
+  description =
+    "Quality healthcare with compassionate care and modern medical facilities.",
 } = Astro.props;
 ---
 
@@ -20,13 +21,203 @@ const {
     <meta name="viewport" content="width=device-width" />
 
     <title>{title}</title>
-    <meta name="description" content={description} />
 
-    <link rel="icon" href="/logooo.png" />
+    <meta
+      name="description"
+      content={description}
+    />
+
+    <link
+      rel="icon"
+      href="/logooo.png"
+    />
   </head>
 
   <body>
+
+    <!-- =====================================================
+         PAGE LOADER
+         ===================================================== -->
+
+    <div
+      class="page-loader"
+      id="page-loader"
+      aria-label="Loading Health Vision Hospital"
+      role="status"
+    >
+      <img
+        src="/logooo.png"
+        alt="Health Vision Hospital"
+        class="page-loader-logo"
+        width="90"
+        height="90"
+        decoding="async"
+        draggable="false"
+      />
+    </div>
+
+
+    <!-- =====================================================
+         WEBSITE CONTENT
+         ===================================================== -->
+
     <slot />
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <Footer />
+
+
+    <!-- =====================================================
+         LOADER SCRIPT
+         ===================================================== -->
+
+    <script>
+      const hidePageLoader = () => {
+        const loader =
+          document.getElementById("page-loader");
+
+        if (!loader) return;
+
+        loader.classList.add("is-hidden");
+
+        window.setTimeout(() => {
+          loader.remove();
+        }, 450);
+      };
+
+      if (document.readyState === "complete") {
+        hidePageLoader();
+      } else {
+        window.addEventListener(
+          "load",
+          hidePageLoader,
+          { once: true }
+        );
+      }
+    </script>
+
+
+    <!-- =====================================================
+         LOADER CSS
+         ===================================================== -->
+
+    <style>
+      /* =====================================================
+         PAGE LOADER
+         ===================================================== */
+
+      .page-loader {
+        position: fixed;
+        inset: 0;
+
+        z-index: 99999;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        background:
+          linear-gradient(
+            180deg,
+            #edf8ff 0%,
+            #f7fbff 50%,
+            #f5f9fd 100%
+          );
+
+        opacity: 1;
+        visibility: visible;
+
+        transition:
+          opacity 0.4s ease,
+          visibility 0.4s ease;
+      }
+
+
+      /* =====================================================
+         LOGO
+         ===================================================== */
+
+      .page-loader-logo {
+        display: block;
+
+        width: 90px;
+        height: 90px;
+
+        object-fit: contain;
+
+        user-select: none;
+        -webkit-user-drag: none;
+
+        animation:
+          page-loader-pulse
+          1.1s
+          ease-in-out
+          infinite
+          alternate;
+      }
+
+
+      /* =====================================================
+         HIDE
+         ===================================================== */
+
+      .page-loader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+
+      /* =====================================================
+         LOGO ANIMATION
+         ===================================================== */
+
+      @keyframes page-loader-pulse {
+        0% {
+          transform: scale(0.94);
+          opacity: 0.72;
+        }
+
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+
+      /* =====================================================
+         MOBILE
+         ===================================================== */
+
+      @media (max-width: 640px) {
+        .page-loader-logo {
+          width: 76px;
+          height: 76px;
+        }
+      }
+
+
+      /* =====================================================
+         REDUCED MOTION
+         ===================================================== */
+
+      @media (prefers-reduced-motion: reduce) {
+        .page-loader {
+          transition: none;
+        }
+
+        .page-loader-logo {
+          animation: none;
+        }
+      }
+    </style>
+
   </body>
 </html>
